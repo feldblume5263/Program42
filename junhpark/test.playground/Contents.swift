@@ -5,7 +5,7 @@ var str = "Hello, playground"
 let constant: Double = 10.5
 var y = 10
 var x = Double(y) + constant
-
+// var과 let의 차이 : let은 한번 선언하고 값을 지정하면, 후에 변경ㅇ ㅣ불가능하다.
 var number: Double = 10.5
 var result: Double = number + Double(constant)
 if y == 10
@@ -87,17 +87,48 @@ for (key, value) in bookCollectionDict
 
 var emojiDict: [String: String] = ["👻": "Ghost", "💩": "Poop", "😠": "Aangry", "😱": "scream", "👾": "Alien monster"]
 var wordToLookup = "👻"
-var meaning = emojiDict[wordToLookup]
+var meaning = emojiDict[wordToLookup] // 실제로 키값이 주어지지 않을 수도 있기 때문에, meaning의 값은 선택변수이다.
+
+print(meaning!)
 
 wordToLookup = "😠"
 meaning = emojiDict[wordToLookup]
+
+if let meaning = meaning
+{
+    print(meaning)
+}
 
 //특수값 "nil"은 값이 없는 선택적 변수에 지정됨
 var jobTitle: String?
 jobTitle = "iOS Developer"
 //선택적 변수를 선언하고 값을 지정하는 것 까지는 괜찮은데, 그 값을 사용해서 연산을 하려고 했을 때 문제가 발생함
+//끝에 !를 붙이는 것을 강제 언래핑이라고 함.
 if jobTitle != nil
 {
     message = "Your job titile is " + jobTitle!
 }
+if let jobTitleWithValue = jobTitle
+{
+    message = "Your job title is " + jobTitleWithValue
+}
+if let jobTitle = jobTitle
+{
+    message = "Your job title is " + jobTitle
+}
 
+let containerView = UIView(frame: CGRect(x: 0, y:0, width: 300, height: 300))
+containerView.backgroundColor = UIColor.purple
+
+let emojiLabel = UILabel(frame: CGRect(x: 95, y: 20, width: 150, height: 150))
+emojiLabel.text = wordToLookup
+emojiLabel.font = UIFont.systemFont(ofSize: 100.0)
+
+containerView.addSubview(emojiLabel)
+
+let meaningLabel = UILabel(frame: CGRect(x: 110, y: 100, width: 150, height: 150))
+meaningLabel.text = meaning
+meaningLabel.font = UIFont.systemFont(ofSize: 30.0)
+meaningLabel.textColor = UIColor.white
+
+containerView.addSubview(meaningLabel)
