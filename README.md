@@ -1,3 +1,3 @@
 # <strong>Project TWOSOME</strong>
 ### @ TwosomePlace at Gochon
-### Junhpark and
+### Junhpark and Kyeo
