@@ -89,49 +89,63 @@ class AddDataTableViewController: UITableViewController {
             isButtonPressed[index] = 0
         }
     }
+
     @IBAction func setButton(sender: UIButton)
     {
         if sender.restorationIdentifier! == "monday"
         {
-            mondayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: mondayButton)
         }
         else if sender.restorationIdentifier! == "tuesday"
         {
-            tuesdayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: tuesdayButton)
         }
         else if sender.restorationIdentifier! == "wednesday"
         {
-            wednesdayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: wednesdayButton)
         }
         else if sender.restorationIdentifier! == "thursday"
         {
-            thursdayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: thursdayButton)
         }
         else if sender.restorationIdentifier! == "friday"
         {
-            fridayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+           tapDayButton(sender: fridayButton)
         }
         else if sender.restorationIdentifier! == "saturday"
         {
-            saturdayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: saturdayButton)
         }
         else if sender.restorationIdentifier! == "sunday"
         {
-            sundayButton.addTarget(self, action: #selector(self.tapDayButton), for: .touchUpInside)
+            tapDayButton(sender: sundayButton)
         }
     }
-    override func viewDidLoad() {
+
+    @IBAction func addButtonPressed(sender: UIBarButtonItem)
+    {
+        let mainVC = MainViewController()
+        mainVC.data = isButtonPressed
+        print("DATA: \(mainVC.data)")
+        mainVC.data.append(0)
+        mainVC.mainTable?.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
         createDatePicker()
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of rows
         return 4
     }

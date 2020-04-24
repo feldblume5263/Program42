@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176B1A5424521194004C7B8F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176B1A5324521194004C7B8F /* MapKit.framework */; };
 		17C38CD924517CE4008BBE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C38CD824517CE4008BBE6C /* AppDelegate.swift */; };
 		17C38CDB24517CE4008BBE6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C38CDA24517CE4008BBE6C /* SceneDelegate.swift */; };
 		17C38CE024517CE4008BBE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C38CDE24517CE4008BBE6C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		176B1A5324521194004C7B8F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		17C38CD524517CE4008BBE6C /* PrototypeKyeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeKyeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C38CD824517CE4008BBE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17C38CDA24517CE4008BBE6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176B1A5424521194004C7B8F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176B1A5224521194004C7B8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				176B1A5324521194004C7B8F /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17C38CCC24517CE4008BBE6C = {
 			isa = PBXGroup;
 			children = (
 				17C38CD724517CE4008BBE6C /* PrototypeKyeo */,
 				17C38CD624517CE4008BBE6C /* Products */,
+				176B1A5224521194004C7B8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
