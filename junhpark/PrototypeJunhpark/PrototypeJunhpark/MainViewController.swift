@@ -20,7 +20,13 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    func setUserInfo()
+    {
+        userImage.layer.cornerRadius = userImage.frame.width / 2
+        userImage.clipsToBounds = true
+        userID!.text = "리눅스 토르발즈"
+    }
 
 }
 
