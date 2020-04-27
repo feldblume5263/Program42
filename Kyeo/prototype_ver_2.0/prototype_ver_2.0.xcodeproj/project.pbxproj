@@ -13,6 +13,7 @@
 		17547D5B24556AFE000AB725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17547D5A24556AFE000AB725 /* Assets.xcassets */; };
 		17547D5E24556AFE000AB725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17547D5C24556AFE000AB725 /* LaunchScreen.storyboard */; };
 		17F87F322455E3030097946B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F87F312455E3030097946B /* MainViewController.swift */; };
+		17F87F342455FE240097946B /* AddMissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F87F332455FE240097946B /* AddMissionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		17547D5D24556AFE000AB725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17547D5F24556AFE000AB725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17F87F312455E3030097946B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		17F87F332455FE240097946B /* AddMissionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMissionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				17547D5124556AFD000AB725 /* AppDelegate.swift */,
 				17547D5324556AFD000AB725 /* SceneDelegate.swift */,
 				17F87F312455E3030097946B /* MainViewController.swift */,
+				17F87F332455FE240097946B /* AddMissionTableViewController.swift */,
 				17547D5724556AFD000AB725 /* Main.storyboard */,
 				17547D5A24556AFE000AB725 /* Assets.xcassets */,
 				17547D5C24556AFE000AB725 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F87F342455FE240097946B /* AddMissionTableViewController.swift in Sources */,
 				17F87F322455E3030097946B /* MainViewController.swift in Sources */,
 				17547D5224556AFD000AB725 /* AppDelegate.swift in Sources */,
 				17547D5424556AFD000AB725 /* SceneDelegate.swift in Sources */,
