@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WOK-V4-mg8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCx-jd-dcP">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +11,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="myList" id="bCx-jd-dcP" customClass="MyPurposeListTableViewController" customModule="secondPrototype" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdk-On-Zgr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -94,45 +93,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otE-yu-bJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399" y="-64"/>
-        </scene>
-        <!--Main Page View Controller-->
-        <scene sceneID="A2h-CG-SL7">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hm7-jp-TMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="WOK-V4-mg8" customClass="MainPageViewController" customModule="secondPrototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UdK-lU-BEF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fof-P6-5kf" customClass="MainToListButton" customModule="secondPrototype" customModuleProvider="target">
-                                <rect key="frame" x="37.666666666666657" y="389.66666666666669" width="300" height="33"/>
-                                <color key="backgroundColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="88d-26-8rv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="나의 목표 목록">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bCx-jd-dcP" kind="popoverPresentation" popoverAnchorView="fof-P6-5kf" id="pl4-fN-NYZ">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="fof-P6-5kf" firstAttribute="centerY" secondItem="UdK-lU-BEF" secondAttribute="centerY" id="1Iq-n4-Xws"/>
-                            <constraint firstItem="fof-P6-5kf" firstAttribute="leading" secondItem="8wY-PZ-PlP" secondAttribute="leading" constant="37.5" id="240-fe-iJW"/>
-                            <constraint firstItem="8wY-PZ-PlP" firstAttribute="trailing" secondItem="fof-P6-5kf" secondAttribute="trailing" constant="37.5" id="B7W-Fg-2aI"/>
-                            <constraint firstItem="fof-P6-5kf" firstAttribute="centerX" secondItem="UdK-lU-BEF" secondAttribute="centerX" id="Qjs-UT-Ws5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8wY-PZ-PlP"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-407" y="-64"/>
         </scene>
     </scenes>
 </document>

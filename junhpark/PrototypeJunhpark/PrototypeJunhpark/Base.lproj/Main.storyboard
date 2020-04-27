@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5hU-lP-u8B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PrototypeJunhpark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-lP-WDp">
+                                <rect key="frame" x="0.0" y="165" width="414" height="653"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-Gv-mOB">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Home" width="131" id="j39-nH-qm7"/>
+                                    <barButtonItem title="Community" width="153" id="cYj-hV-9Bx"/>
+                                    <barButtonItem title="Setting" width="282" id="xVL-29-WDx"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2iB-Tx-sRt"/>
+                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FlU-5u-EAJ"/>
+                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wpr-H5-iiS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="obR-wa-6fU">
+                        <barButtonItem key="rightBarButtonItem" title="새 미션 추가" style="plain" id="anp-Ci-QIg">
+                            <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="lvI-5Y-e6q" kind="show" id="MHk-jV-8OP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gGl-7S-bqe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5hU-lP-u8B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FOu-DU-kyc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NHL-w3-SXJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEb-KX-Mai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--AddProject-->
+        <scene sceneID="nNb-eg-kI5">
+            <objects>
+                <viewController id="lvI-5Y-e6q" customClass="AddProjectViewController" customModule="PrototypeJunhpark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3fY-X7-AGo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vHr-Ek-cv2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vHr-Ek-cv2" secondAttribute="bottom" id="Jz7-sT-hNG"/>
+                            <constraint firstItem="vHr-Ek-cv2" firstAttribute="leading" secondItem="QEP-eM-AMh" secondAttribute="leading" id="OT2-pp-ea2"/>
+                            <constraint firstItem="vHr-Ek-cv2" firstAttribute="top" secondItem="3fY-X7-AGo" secondAttribute="top" id="baz-Eq-69B"/>
+                            <constraint firstItem="vHr-Ek-cv2" firstAttribute="trailing" secondItem="QEP-eM-AMh" secondAttribute="trailing" id="weJ-op-3Qt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QEP-eM-AMh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AddProject" id="Dwh-PB-elP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRM-cm-xYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834.7826086956525" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
