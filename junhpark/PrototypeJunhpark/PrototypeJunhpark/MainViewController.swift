@@ -10,23 +10,10 @@ import UIKit
 
 class MainViewController: UIViewController {
    
-    var data: [Int] = []
-       @IBOutlet var mainTable: UITableView?
-       @IBOutlet var projectName: UILabel!
-       @IBOutlet var timeData: UILabel!
-       @IBOutlet var locationData: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    func setUserInfo()
-    {
-        userImage.layer.cornerRadius = userImage.frame.width / 2
-        userImage.clipsToBounds = true
-        userID!.text = "리눅스 토르발즈"
-    }
-
 }
 
