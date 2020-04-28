@@ -10,10 +10,32 @@ import UIKit
 
 class AddMissionTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    func setButtonShape()
+    {
+        mondayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        mondayButton.clipsToBounds = true
+        tuesdayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        tuesdayButton.clipsToBounds = true
+        wednesdayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        wednesdayButton.clipsToBounds = true
+        thursdayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        thursdayButton.clipsToBounds = true
+        fridayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        fridayButton.clipsToBounds = true
+        saturdayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        saturdayButton.clipsToBounds = true
+        sundayButton.layer.cornerRadius = mondayButton.bounds.width / 2
+        sundayButton.clipsToBounds = true
+    }
+    
+    @IBOutlet var timeData: UIDatePicker!
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        setButtonShape()
     }
+    
     var isDefaultImage = false
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -68,5 +90,49 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         }
         setImageConstraint()
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet var mondayButton: UIButton!
+    @IBOutlet var tuesdayButton: UIButton!
+    @IBOutlet var wednesdayButton: UIButton!
+    @IBOutlet var thursdayButton: UIButton!
+    @IBOutlet var fridayButton: UIButton!
+    @IBOutlet var saturdayButton: UIButton!
+    @IBOutlet var sundayButton: UIButton!
+
+    var dayButtonData = Array(repeating: 0, count: 7)
+    var index = 0
+    @IBAction func tapDayButton(sender: UIButton)
+    {
+        switch sender.restorationIdentifier
+        {
+        case "tuesday":
+            index = 1
+        case "wednesday":
+            index = 2
+        case "thursday":
+            index = 3
+        case "friday":
+            index = 4
+        case "saturday":
+            index = 5
+        case "sunday":
+            index = 6
+        default:
+            index = 0
+        }
+        print("\(dayButtonData)")
+        if dayButtonData[index] == 0
+        {
+            dayButtonData[index] = 1
+            sender.setTitleColor(.darkGray, for: .normal)
+            sender.backgroundColor = UIColor(red: 0.361, green: 0.788, blue: 0.812, alpha: 1.0)
+        }
+        else if dayButtonData[index] == 1
+        {
+            dayButtonData[index] = 0
+            sender.setTitleColor(.systemGray, for: .normal)
+            sender.backgroundColor = .systemGray6
+        }
     }
 }
