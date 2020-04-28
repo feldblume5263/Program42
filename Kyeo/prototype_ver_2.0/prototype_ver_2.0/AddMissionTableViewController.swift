@@ -29,7 +29,7 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
     }
     
     @IBOutlet var timeData: UIDatePicker!
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -134,5 +134,13 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
             sender.setTitleColor(.systemGray, for: .normal)
             sender.backgroundColor = .systemGray6
         }
+    }
+    
+    @IBAction func addButtonPressed(sender: UIButton)
+    {
+        let mainView = MainViewController()
+        mainView.tableCount += 1
+        print("TABLECOUNT: \(mainView.tableCount)")
+        
     }
 }

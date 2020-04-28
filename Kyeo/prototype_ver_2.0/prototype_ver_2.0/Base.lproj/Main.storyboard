@@ -443,6 +443,9 @@
                                                     <state key="normal" title="완료">
                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="addButtonPressedWithSender:" destination="rpV-Vj-fPQ" eventType="touchUpInside" id="fVE-29-mKg"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
