@@ -14,6 +14,7 @@
 		4F3424FF245671BD005A8940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3424FE245671BD005A8940 /* Assets.xcassets */; };
 		4F342502245671BD005A8940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F342500245671BD005A8940 /* LaunchScreen.storyboard */; };
 		4F34250E2456AEC1005A8940 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */; };
+		4F34251624582C49005A8940 /* MyMissionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4F342501245671BD005A8940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F342503245671BD005A8940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMissionListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				4F3424F5245671B9005A8940 /* AppDelegate.swift */,
 				4F3424F7245671B9005A8940 /* SceneDelegate.swift */,
-				4F3424F9245671B9005A8940 /* MainViewController.swift */,
 				4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */,
+				4F3424F9245671B9005A8940 /* MainViewController.swift */,
+				4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */,
 				4F3424FB245671B9005A8940 /* Main.storyboard */,
 				4F3424FE245671BD005A8940 /* Assets.xcassets */,
 				4F342500245671BD005A8940 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				4F3424FA245671B9005A8940 /* MainViewController.swift in Sources */,
 				4F3424F6245671B9005A8940 /* AppDelegate.swift in Sources */,
+				4F34251624582C49005A8940 /* MyMissionListTableViewCell.swift in Sources */,
 				4F34250E2456AEC1005A8940 /* AddProjectViewController.swift in Sources */,
 				4F3424F8245671B9005A8940 /* SceneDelegate.swift in Sources */,
 			);
