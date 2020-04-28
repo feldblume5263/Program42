@@ -364,11 +364,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fhi-fc-PT6">
                         <barButtonItem key="backBarButtonItem" title=" " id="sHh-PO-Rdk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="2sb-fe-E0W">
-                            <connections>
-                                <action selector="addButtonPressedWithSender:" destination="bT4-XK-5Sk" id="UJZ-gE-QMA"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="2sb-fe-E0W"/>
                     </navigationItem>
                     <connections>
                         <outlet property="fridayButton" destination="k2s-4a-Rlf" id="OD2-ai-4NA"/>

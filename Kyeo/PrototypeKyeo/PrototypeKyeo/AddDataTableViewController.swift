@@ -110,7 +110,7 @@ class AddDataTableViewController: UITableViewController {
         }
         else if sender.restorationIdentifier! == "friday"
         {
-           tapDayButton(sender: fridayButton)
+            tapDayButton(sender: fridayButton)
         }
         else if sender.restorationIdentifier! == "saturday"
         {
@@ -120,16 +120,6 @@ class AddDataTableViewController: UITableViewController {
         {
             tapDayButton(sender: sundayButton)
         }
-    }
-
-    @IBAction func addButtonPressed(sender: UIBarButtonItem)
-    {
-        let mainVC = MainViewController()
-        mainVC.data = isButtonPressed
-        print("DATA: \(mainVC.data)")
-        mainVC.data.append(0)
-        mainVC.mainTable?.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
-        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad()
