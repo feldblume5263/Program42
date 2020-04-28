@@ -13,7 +13,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userID = "JonyIve"
     var missionName = ["study", "yoga", "running"]
     var missionThumbnail = ["study", "yoga", "running"]
-    var missionDay = ["study" : "Mon, Tue, Wed, Thu, Fri", "yoga" : "Fri", "running" : "Sat, Sun" ]
+    var missionDay = ["study" : "Mon, Tue, Wed, Thu, Fri", "yoga" : "Wed, Fri", "running" : "Sat, Sun" ]
     var missionTime = ["study" : "11:00", "yoga" : "18:00", "running" : "09:00"]
     
     var userThumbnailImage: UIImage?
