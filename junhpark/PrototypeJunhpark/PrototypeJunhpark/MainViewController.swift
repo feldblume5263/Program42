@@ -11,20 +11,25 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var userID = "JonyIve"
-    
-    
     var missionName = ["study", "yoga", "running"]
     var missionThumbnail = ["study", "yoga", "running"]
     var missionDay = ["study" : "Mon, Tue, Wed, Thu, Fri", "yoga" : "Fri", "running" : "Sat, Sun" ]
     var missionTime = ["study" : "11:00", "yoga" : "18:00", "running" : "09:00"]
     
-    @IBOutlet var tableView: UITableView?
+    var userThumbnailImage: UIImage?
     
+    @IBOutlet var userIDLabel: UILabel!
+    @IBOutlet var userThumbnailImageview: UIImageView!
+    @IBOutlet var tableView: UITableView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView?.delegate = self
         tableView?.dataSource = self
+        userIDLabel.text = userID
+        userThumbnailImageview.layer.cornerRadius = userThumbnailImageview.frame.width / 2
+        userThumbnailImage = UIImage(named: userID)
+        userThumbnailImageview.image = userThumbnailImage
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
