@@ -15,20 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-Gv-mOB">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem title="Home" image="house.fill" catalog="system" width="131" id="j39-nH-qm7">
-                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem title="Community" image="person.3.fill" catalog="system" width="153" id="cYj-hV-9Bx">
-                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem title="Setting" image="person.circle.fill" catalog="system" width="282" id="xVL-29-WDx">
-                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-lP-WDp">
                                 <rect key="frame" x="0.0" y="231" width="414" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -41,17 +27,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AGH-3z-OrC">
-                                                    <rect key="frame" x="0.0" y="10" width="414" height="180"/>
+                                                    <rect key="frame" x="0.0" y="10" width="414" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="414" id="6J5-Yx-DO1"/>
-                                                        <constraint firstAttribute="height" constant="180" id="GNQ-rZ-lfx"/>
+                                                        <constraint firstAttribute="height" constant="150" id="GNQ-rZ-lfx"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Kp-Ql-DCr">
-                                                    <rect key="frame" x="20" y="195" width="300" height="66"/>
+                                                    <rect key="frame" x="20" y="165" width="300" height="96"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="missionName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAU-d1-xV0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="300" id="IS8-Zo-yNP"/>
                                                             </constraints>
@@ -60,7 +46,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="dayOfWeek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5G-xx-xdv">
-                                                            <rect key="frame" x="0.0" y="25.5" width="300" height="18"/>
+                                                            <rect key="frame" x="0.0" y="55" width="300" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="300" id="8KX-ef-X2V"/>
                                                             </constraints>
@@ -69,7 +55,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpb-92-MOK">
-                                                            <rect key="frame" x="0.0" y="48.5" width="300" height="17.5"/>
+                                                            <rect key="frame" x="0.0" y="78" width="300" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="300" id="Qra-Hy-kJF"/>
                                                             </constraints>
@@ -97,7 +83,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9f-bf-oGS">
-                                                    <rect key="frame" x="384" y="205" width="20" height="20"/>
+                                                    <rect key="frame" x="384" y="175" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="3G9-lt-CVY"/>
                                                         <constraint firstAttribute="height" constant="20" id="6DI-KB-s7n"/>
@@ -157,18 +143,34 @@
                                     <constraint firstAttribute="bottom" secondItem="Ubg-be-8Uz" secondAttribute="bottom" constant="16" id="Lch-XJ-dNf"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-Gv-mOB">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4iL-Zp-JuQ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Home" image="house.fill" catalog="system" width="131" id="j39-nH-qm7">
+                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Community" image="person.3.fill" catalog="system" width="153" id="cYj-hV-9Bx">
+                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Setting" image="person.crop.circle.fill" catalog="system" width="282" id="xVL-29-WDx">
+                                        <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="top" secondItem="ypg-lP-WDp" secondAttribute="bottom" id="1gg-i8-GKh"/>
                             <constraint firstItem="Q9j-Gv-mOB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2iB-Tx-sRt"/>
+                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="top" secondItem="ypg-lP-WDp" secondAttribute="bottom" id="8Ai-Za-Xh8"/>
                             <constraint firstItem="ypg-lP-WDp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EZ8-Os-Qrn"/>
                             <constraint firstItem="Q9j-Gv-mOB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FlU-5u-EAJ"/>
                             <constraint firstItem="ypg-lP-WDp" firstAttribute="top" secondItem="rl0-gq-WOg" secondAttribute="bottom" id="PgZ-U7-Kcf"/>
-                            <constraint firstItem="ypg-lP-WDp" firstAttribute="top" secondItem="rl0-gq-WOg" secondAttribute="bottom" id="Wbf-tw-x7X"/>
+                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eiF-Mb-R3T"/>
                             <constraint firstItem="ypg-lP-WDp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jsx-Hg-i02"/>
                             <constraint firstItem="rl0-gq-WOg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kyS-8Q-OxT"/>
-                            <constraint firstItem="Q9j-Gv-mOB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wpr-H5-iiS"/>
                             <constraint firstItem="rl0-gq-WOg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x6w-wh-GmB"/>
                             <constraint firstItem="rl0-gq-WOg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yg7-j8-E6D"/>
                         </constraints>
@@ -184,6 +186,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ypg-lP-WDp" id="mHN-H8-3qt"/>
+                        <outlet property="userIDLabel" destination="CZ1-Zu-ja0" id="bXq-UL-H3R"/>
+                        <outlet property="userThumbnailImageview" destination="vL1-YZ-gQD" id="Ww5-2O-EA6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -199,6 +203,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.16887574899999999" green="0.65843588080000004" blue="0.60343560730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -242,6 +249,6 @@
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
