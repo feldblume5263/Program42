@@ -10,23 +10,34 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    var tableCount = 0
+    var missionData: [String] = []
+    var nameData = ""
+    var timeData = ""
+    @IBOutlet var mainTableView: UITableView!
+    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var userID: UILabel!
+
+    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return tableCount
+        return missionData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cellIdentifier = "missionData"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
 
         cell.selectionStyle = .none
+        cell.missionName.text = missionData[indexPath.row]
+        let addMissionVC = AddMissionTableViewController()
+        if addMissionVC.imageData?.image != nil
+        {
+        cell.missionImage.image = addMissionVC.imageData!.image
+        }
         return cell
     }
-    
-    @IBOutlet var userImage: UIImageView!
-    @IBOutlet var userID: UILabel!
     
     @objc func goAddMissionView(sender: UIBarButtonItem)
     {
@@ -56,5 +67,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         setAddMissionButton()
         setUserInfo()
+    }
+    
+    @IBAction func addButtonPressed(segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "addButton"
+        {
+            let mainVC = segue.source as! AddMissionTableViewController
+            nameData = mainVC.missionName.text!
+            missionData.append(nameData)
+            mainTableView.reloadData()
+        }
     }
 }

@@ -10,6 +10,18 @@ import UIKit
 
 class AddMissionTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    @IBOutlet var timeData: UIDatePicker!
+    @IBOutlet var imageOption: UIImageView!
+    @IBOutlet var mondayButton: UIButton!
+    @IBOutlet var tuesdayButton: UIButton!
+    @IBOutlet var wednesdayButton: UIButton!
+    @IBOutlet var thursdayButton: UIButton!
+    @IBOutlet var fridayButton: UIButton!
+    @IBOutlet var saturdayButton: UIButton!
+    @IBOutlet var sundayButton: UIButton!
+    @IBOutlet var missionName: UITextField!
+    @IBOutlet var missionTime: UIDatePicker!
+    
     func setButtonShape()
     {
         mondayButton.layer.cornerRadius = mondayButton.bounds.width / 2
@@ -27,8 +39,6 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         sundayButton.layer.cornerRadius = mondayButton.bounds.width / 2
         sundayButton.clipsToBounds = true
     }
-    
-    @IBOutlet var timeData: UIDatePicker!
     
     override func viewDidLoad()
     {
@@ -64,8 +74,6 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         }
     }
     
-    @IBOutlet var imageOption: UIImageView!
-    
     func setImageConstraint()
     {
         let leadingConstraint = NSLayoutConstraint(item: imageOption as Any, attribute: .leading, relatedBy: .equal, toItem: imageOption.superview, attribute: .leading, multiplier: 1, constant: 0)
@@ -80,10 +88,13 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         let bottomConstraint = NSLayoutConstraint(item: imageOption as Any, attribute: .bottom, relatedBy: .equal, toItem: imageOption.superview, attribute: .bottom, multiplier: 1, constant: 0)
         bottomConstraint.isActive = true
     }
-    
+    var imageData: UIImageView?
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageOption.image = selectedImage
+            
+            imageData!.image = selectedImage
+            
             imageOption.contentMode = .scaleAspectFill
             imageOption.clipsToBounds = true
             isDefaultImage = false
@@ -91,14 +102,6 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         setImageConstraint()
         dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet var mondayButton: UIButton!
-    @IBOutlet var tuesdayButton: UIButton!
-    @IBOutlet var wednesdayButton: UIButton!
-    @IBOutlet var thursdayButton: UIButton!
-    @IBOutlet var fridayButton: UIButton!
-    @IBOutlet var saturdayButton: UIButton!
-    @IBOutlet var sundayButton: UIButton!
 
     var dayButtonData = Array(repeating: 0, count: 7)
     var index = 0
@@ -134,13 +137,5 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
             sender.setTitleColor(.systemGray, for: .normal)
             sender.backgroundColor = .systemGray6
         }
-    }
-    
-    @IBAction func addButtonPressed(sender: UIButton)
-    {
-        let mainView = MainViewController()
-        mainView.tableCount += 1
-        print("TABLECOUNT: \(mainView.tableCount)")
-        
     }
 }
