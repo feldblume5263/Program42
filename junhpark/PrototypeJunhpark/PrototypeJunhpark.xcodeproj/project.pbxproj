@@ -15,6 +15,10 @@
 		4F342502245671BD005A8940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F342500245671BD005A8940 /* LaunchScreen.storyboard */; };
 		4F34250E2456AEC1005A8940 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */; };
 		4F34251624582C49005A8940 /* MyMissionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */; };
+		4F34251E245893BB005A8940 /* FinishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34251D245893BB005A8940 /* FinishButton.swift */; };
+		4F3425212459AE7E005A8940 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3425202459AE7E005A8940 /* MapKit.framework */; };
+		4F3425232459AF37005A8940 /* InsertLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3425222459AF37005A8940 /* InsertLocationViewController.swift */; };
+		4F3425252459D7E6005A8940 /* CompleteMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3425242459D7E6005A8940 /* CompleteMissionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		4F342503245671BD005A8940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMissionListTableViewCell.swift; sourceTree = "<group>"; };
+		4F34251D245893BB005A8940 /* FinishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishButton.swift; sourceTree = "<group>"; };
+		4F3425202459AE7E005A8940 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4F3425222459AF37005A8940 /* InsertLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLocationViewController.swift; sourceTree = "<group>"; };
+		4F3425242459D7E6005A8940 /* CompleteMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteMissionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3425212459AE7E005A8940 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,7 @@
 			children = (
 				4F3424F4245671B9005A8940 /* PrototypeJunhpark */,
 				4F3424F3245671B9005A8940 /* Products */,
+				4F34251F2459AE7E005A8940 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,15 +72,26 @@
 			children = (
 				4F3424F5245671B9005A8940 /* AppDelegate.swift */,
 				4F3424F7245671B9005A8940 /* SceneDelegate.swift */,
+				4F34251D245893BB005A8940 /* FinishButton.swift */,
+				4F3425222459AF37005A8940 /* InsertLocationViewController.swift */,
 				4F34250D2456AEC1005A8940 /* AddProjectViewController.swift */,
-				4F3424F9245671B9005A8940 /* MainViewController.swift */,
+				4F3425242459D7E6005A8940 /* CompleteMissionViewController.swift */,
 				4F34251524582C49005A8940 /* MyMissionListTableViewCell.swift */,
+				4F3424F9245671B9005A8940 /* MainViewController.swift */,
 				4F3424FB245671B9005A8940 /* Main.storyboard */,
 				4F3424FE245671BD005A8940 /* Assets.xcassets */,
 				4F342500245671BD005A8940 /* LaunchScreen.storyboard */,
 				4F342503245671BD005A8940 /* Info.plist */,
 			);
 			path = PrototypeJunhpark;
+			sourceTree = "<group>";
+		};
+		4F34251F2459AE7E005A8940 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F3425202459AE7E005A8940 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3425252459D7E6005A8940 /* CompleteMissionViewController.swift in Sources */,
 				4F3424FA245671B9005A8940 /* MainViewController.swift in Sources */,
 				4F3424F6245671B9005A8940 /* AppDelegate.swift in Sources */,
+				4F3425232459AF37005A8940 /* InsertLocationViewController.swift in Sources */,
+				4F34251E245893BB005A8940 /* FinishButton.swift in Sources */,
 				4F34251624582C49005A8940 /* MyMissionListTableViewCell.swift in Sources */,
 				4F34250E2456AEC1005A8940 /* AddProjectViewController.swift in Sources */,
 				4F3424F8245671B9005A8940 /* SceneDelegate.swift in Sources */,

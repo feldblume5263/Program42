@@ -9,19 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var userID = "JonyIve"
-    var missionName = ["study", "yoga", "running"]
-    var missionThumbnail = ["study", "yoga", "running"]
-    var missionDay = ["study" : "Mon, Tue, Wed, Thu, Fri", "yoga" : "Wed, Fri", "running" : "Sat, Sun" ]
-    var missionTime = ["study" : "11:00", "yoga" : "18:00", "running" : "09:00"]
     
-    var userThumbnailImage: UIImage?
-    
-    @IBOutlet var userIDLabel: UILabel!
-    @IBOutlet var userThumbnailImageview: UIImageView!
-    @IBOutlet var tableView: UITableView?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView?.delegate = self
@@ -31,6 +19,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         userThumbnailImage = UIImage(named: userID)
         userThumbnailImageview.image = userThumbnailImage
     }
+    
+    @IBOutlet var userIDLabel: UILabel!
+    @IBOutlet var userThumbnailImageview: UIImageView!
+    @IBOutlet var tableView: UITableView!
+    
+    var userID = "JonyIve"
+    var missionName = ["study", "yoga", "running"]
+    var missionThumbnail = ["study", "yoga", "running"]
+    var missionDay = ["study" : "Mon, Tue, Wed, Thu, Fri", "yoga" : "Wed, Fri", "running" : "Sat, Sun" ]
+    var missionTime = ["study" : "11:00", "yoga" : "18:00", "running" : "09:00"]
+    var userThumbnailImage: UIImage?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "missionList", for: indexPath) as! MyMissionListTableViewCell
@@ -49,8 +48,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return missionName.count
     }
-    
-    
     
 }
 
