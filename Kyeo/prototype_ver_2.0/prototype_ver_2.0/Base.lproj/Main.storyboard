@@ -478,7 +478,7 @@
                         <outlet property="saturdayButton" destination="3MS-Ry-vbY" id="bFl-ff-WF3"/>
                         <outlet property="sundayButton" destination="30w-dw-Liu" id="VDX-e2-SRw"/>
                         <outlet property="thursdayButton" destination="txS-Jl-DXF" id="WfF-wM-tb1"/>
-                        <outlet property="timeData" destination="MO6-t4-rqK" id="zXj-Yt-hX0"/>
+                        <outlet property="timeOption" destination="MO6-t4-rqK" id="Y0I-Yh-mi6"/>
                         <outlet property="tuesdayButton" destination="ecw-te-mwV" id="kBw-O4-93i"/>
                         <outlet property="wednesdayButton" destination="xfV-iY-Ia4" id="36t-Pc-CC7"/>
                     </connections>

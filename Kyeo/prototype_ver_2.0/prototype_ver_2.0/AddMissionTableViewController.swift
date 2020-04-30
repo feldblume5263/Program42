@@ -10,7 +10,7 @@ import UIKit
 
 class AddMissionTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
-    @IBOutlet var timeData: UIDatePicker!
+    @IBOutlet var timeOption: UIDatePicker!
     @IBOutlet var imageOption: UIImageView!
     @IBOutlet var mondayButton: UIButton!
     @IBOutlet var tuesdayButton: UIButton!
@@ -88,12 +88,10 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         let bottomConstraint = NSLayoutConstraint(item: imageOption as Any, attribute: .bottom, relatedBy: .equal, toItem: imageOption.superview, attribute: .bottom, multiplier: 1, constant: 0)
         bottomConstraint.isActive = true
     }
-    var imageData: UIImageView?
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageOption.image = selectedImage
-            
-            imageData!.image = selectedImage
             
             imageOption.contentMode = .scaleAspectFill
             imageOption.clipsToBounds = true
