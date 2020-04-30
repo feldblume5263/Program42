@@ -64,6 +64,7 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
             let defaultImageAction = UIAlertAction(title: "기본 사진으로 설정", style: .default, handler: {(action) in
                 self.isDefaultImage = true
                 self.imageOption.image = UIImage(named: "defaultImage")
+                self.imageData = self.imageOption.image
                 self.imageOption.contentMode = .scaleAspectFill
                 self.imageOption.clipsToBounds = true
                 self.setImageConstraint()
@@ -88,11 +89,11 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         let bottomConstraint = NSLayoutConstraint(item: imageOption as Any, attribute: .bottom, relatedBy: .equal, toItem: imageOption.superview, attribute: .bottom, multiplier: 1, constant: 0)
         bottomConstraint.isActive = true
     }
-
+    var imageData: UIImage?
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageOption.image = selectedImage
-            
+            imageData = selectedImage
             imageOption.contentMode = .scaleAspectFill
             imageOption.clipsToBounds = true
             isDefaultImage = false

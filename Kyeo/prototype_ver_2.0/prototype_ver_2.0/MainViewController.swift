@@ -88,6 +88,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.selectionStyle = .none
         cell.missionName.text = "미션이름: " + missionData[indexPath.row]
         cell.missionTime.text = timeArray[indexPath.row] + ", \(dayArray[indexPath.row])"
+        cell.missionImage.image = imageArray[indexPath.row]
         return cell
     }
     
@@ -122,18 +123,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     var dayArray: [String] = []
     var timeArray: [String] = []
+    var imageArray: [UIImage] = []
     @IBAction func addButtonPressed(segue: UIStoryboardSegue)
     {
         if segue.identifier == "addButton"
         {
-            let mainVC = segue.source as! AddMissionTableViewController
-            nameData = mainVC.missionName.text!
+            let addMissionVC = segue.source as! AddMissionTableViewController
+            nameData = addMissionVC.missionName.text!
             let dateForm = DateFormatter()
             dateForm.dateFormat = "인증시간: h:mm aa"
-            timeData = dateForm.string(from: mainVC.timeOption!.date)
-            dayData = mainVC.dayButtonData
-            print("DAYDATA: \(dayData)")
+            timeData = dateForm.string(from: addMissionVC.timeOption!.date)
+            dayData = addMissionVC.dayButtonData
             getDayString()
+            imageArray.append(addMissionVC.imageData!)
             dayArray.append(dayString)
             timeArray.append(timeData)
             missionData.append(nameData)
