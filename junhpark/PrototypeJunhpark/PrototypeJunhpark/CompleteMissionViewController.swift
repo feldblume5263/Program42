@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class CompleteMissionViewController: UIViewController, CLLocationManagerDelegate {
+class CompleteMissionViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet var compareMap: MKMapView!
         
@@ -69,7 +69,6 @@ class CompleteMissionViewController: UIViewController, CLLocationManagerDelegate
                     address += pm!.thoroughfare!
                 }
             })
-            locationManager.stopUpdatingLocation()
             setAnnotation(latitudeValue: 37.488441, longitudeValue: 127.065112, delta: 0.1, title: "이노베이션아카데미", subtitle: "서울 강남구 개포로 416")
         }
         

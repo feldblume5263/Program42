@@ -327,31 +327,27 @@
                                     <constraint firstAttribute="bottom" secondItem="Pdj-jD-Yba" secondAttribute="bottom" constant="30" id="zCq-GW-0kQ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60e-S2-wn2">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60e-S2-wn2">
                                 <rect key="frame" x="0.0" y="88" width="414" height="709"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="87H-YC-IRc">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="709"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="2VB-Ea-lfG"/>
-                                            <constraint firstAttribute="height" constant="709" id="7bA-oA-KXN"/>
-                                        </constraints>
-                                    </mapView>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="87H-YC-IRc" secondAttribute="trailing" id="7Z4-TV-mMA"/>
-                                    <constraint firstAttribute="bottom" secondItem="87H-YC-IRc" secondAttribute="bottom" id="Bn2-xN-eJP"/>
-                                    <constraint firstItem="87H-YC-IRc" firstAttribute="top" secondItem="60e-S2-wn2" secondAttribute="top" id="RHQ-09-u9v"/>
-                                    <constraint firstItem="87H-YC-IRc" firstAttribute="leading" secondItem="60e-S2-wn2" secondAttribute="leading" id="uV8-if-qjz"/>
-                                </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="87H-YC-IRc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="709"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="2VB-Ea-lfG"/>
+                                    <constraint firstAttribute="height" constant="709" id="7bA-oA-KXN"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="60e-S2-wn2" firstAttribute="leading" secondItem="Nzj-AV-rPL" secondAttribute="leading" id="2MP-VP-Hbz"/>
+                            <constraint firstAttribute="trailing" secondItem="87H-YC-IRc" secondAttribute="trailing" id="2mn-0E-5PJ"/>
+                            <constraint firstAttribute="bottom" secondItem="87H-YC-IRc" secondAttribute="bottom" constant="99" id="A18-Fs-r0w"/>
                             <constraint firstItem="60e-S2-wn2" firstAttribute="top" secondItem="Nzj-AV-rPL" secondAttribute="top" id="Iy5-oT-MaO"/>
                             <constraint firstItem="4nY-gj-PMP" firstAttribute="top" secondItem="60e-S2-wn2" secondAttribute="bottom" id="LKn-rY-0SR"/>
+                            <constraint firstItem="87H-YC-IRc" firstAttribute="top" secondItem="b2a-ta-4aM" secondAttribute="top" constant="88" id="MWt-NG-I6w"/>
+                            <constraint firstItem="87H-YC-IRc" firstAttribute="leading" secondItem="b2a-ta-4aM" secondAttribute="leading" id="RLa-if-Ztb"/>
                             <constraint firstItem="60e-S2-wn2" firstAttribute="trailing" secondItem="Nzj-AV-rPL" secondAttribute="trailing" id="tN8-B4-GF0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nzj-AV-rPL"/>

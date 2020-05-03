@@ -13,8 +13,13 @@ class InsertLocationViewController: UIViewController, CLLocationManagerDelegate 
     
         @IBOutlet var missionMap: MKMapView!
         
-        let locationManager = CLLocationManager()
         
+        let locationManager = CLLocationManager()
+        var latitude:Double?
+        var longitude:Double?
+        var centerCoordinate: CLLocationCoordinate2D
+
+
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
@@ -24,8 +29,9 @@ class InsertLocationViewController: UIViewController, CLLocationManagerDelegate 
             locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
             missionMap.showsUserLocation = true
-        }
-        
+            
+    }
+    
         func goLocation(latitudeValue: CLLocationDegrees,
                         longtudeValue: CLLocationDegrees,
                         delta span: Double) -> CLLocationCoordinate2D {
@@ -47,6 +53,14 @@ class InsertLocationViewController: UIViewController, CLLocationManagerDelegate 
             annotation.subtitle = strSubTitle
             missionMap.addAnnotation(annotation)
         }
+    
+        func mapCircleView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+            let renderer = MKCircleRenderer(circle: overlay as! MKCircle)
+            renderer.lineWidth = 0.1
+            renderer.strokeColor = UIColor.red
+
+            return renderer
+           }
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             let pLocation = locations.last
@@ -69,9 +83,5 @@ class InsertLocationViewController: UIViewController, CLLocationManagerDelegate 
                     address += pm!.thoroughfare!
                 }
             })
-            locationManager.stopUpdatingLocation()
-            setAnnotation(latitudeValue: 37.488441, longitudeValue: 127.065112, delta: 0.1, title: "이노베이션아카데미", subtitle: "서울 강남구 개포로 416")
-        }
-        
     }
-
+}
