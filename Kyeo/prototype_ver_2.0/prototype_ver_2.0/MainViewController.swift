@@ -10,23 +10,87 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    var tableCount = 0
+    var missionData: [String] = []
+    var nameData = ""
+    var timeData = ""
+    var dayData: [Int] = []
+    @IBOutlet var mainTableView: UITableView!
+    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var userID: UILabel!
+
+    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return tableCount
+        return missionData.count
+    }
+    
+    var dayString = ""
+    let dayHangul = ["월", "화", "수", "목", "금", "토", "일"]
+    func getDayString()
+    {
+        dayString = ""
+        var i = 0;
+        
+        while i < 7
+        {
+            if dayData[i] == 1
+            {
+                dayString.append(dayHangul[i])
+                if i != 6
+                {
+                    dayString.append(" ")
+                }
+            }
+            i += 1
+        }
+        i = 0
+        while i < 7
+        {
+            if dayData[i] != 1
+            {
+                break
+            }
+            i += 1
+        }
+        if i == 5
+        {
+            dayString = "주중"
+        }
+        else if i == 7
+        {
+            dayString = "매일"
+        }
+        else
+        {
+            i = 0
+            while i < 7
+            {
+                if dayData[i] != 0
+                {
+                    break
+                }
+                i += 1
+            }
+            if i == 5
+            {
+                dayString = "주말"
+            }
+        }
+        print(dayString)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cellIdentifier = "missionData"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
 
         cell.selectionStyle = .none
+        cell.missionName.text = "미션이름: " + missionData[indexPath.row]
+        cell.missionTime.text = timeArray[indexPath.row] + ", \(dayArray[indexPath.row])"
+        cell.missionImage.image = imageArray[indexPath.row]
         return cell
     }
-    
-    @IBOutlet var userImage: UIImageView!
-    @IBOutlet var userID: UILabel!
     
     @objc func goAddMissionView(sender: UIBarButtonItem)
     {
@@ -56,5 +120,26 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         setAddMissionButton()
         setUserInfo()
+    }
+    var dayArray: [String] = []
+    var timeArray: [String] = []
+    var imageArray: [UIImage] = []
+    @IBAction func addButtonPressed(segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "addButton"
+        {
+            let addMissionVC = segue.source as! AddMissionTableViewController
+            nameData = addMissionVC.missionName.text!
+            let dateForm = DateFormatter()
+            dateForm.dateFormat = "인증시간: h:mm aa"
+            timeData = dateForm.string(from: addMissionVC.timeOption!.date)
+            dayData = addMissionVC.dayButtonData
+            getDayString()
+            imageArray.append(addMissionVC.imageData!)
+            dayArray.append(dayString)
+            timeArray.append(timeData)
+            missionData.append(nameData)
+            mainTableView.reloadData()
+        }
     }
 }

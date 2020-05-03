@@ -19,14 +19,14 @@
                                 <rect key="frame" x="0.0" y="233" width="414" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="missionData" rowHeight="336" id="77i-jH-1iu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="missionData" rowHeight="336" id="77i-jH-1iu" customClass="MainTableViewCell" customModule="prototype_ver_2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="336"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="77i-jH-1iu" id="6zv-N2-98F">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-missionImage" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-1n-6jV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="aeR-1n-6jV">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="214"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="414" id="qMm-IH-YVE"/>
@@ -88,6 +88,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="DIn-Hg-Xgr" secondAttribute="trailing" constant="57.5" id="wGq-GV-xmA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="missionImage" destination="aeR-1n-6jV" id="hRf-bl-FvP"/>
+                                            <outlet property="missionName" destination="w8n-1l-ecf" id="cbW-pA-1Dv"/>
+                                            <outlet property="missionTime" destination="RS1-TA-bHp" id="Wx7-jg-r1M"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -144,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="blq-RE-cc8"/>
                     <connections>
+                        <outlet property="mainTableView" destination="dEA-xi-EYO" id="ddP-Rs-pay"/>
                         <outlet property="userID" destination="Cap-11-e3k" id="ILL-UE-H9k"/>
                         <outlet property="userImage" destination="kFN-Bs-FjZ" id="jjg-vy-6Kc"/>
                     </connections>
@@ -444,7 +450,7 @@
                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="addButtonPressedWithSender:" destination="rpV-Vj-fPQ" eventType="touchUpInside" id="fVE-29-mKg"/>
+                                                        <segue destination="sDQ-cu-3F2" kind="unwind" identifier="addButton" unwindAction="addButtonPressedWithSegue:" id="o9i-Jt-J0s"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -466,18 +472,21 @@
                     <connections>
                         <outlet property="fridayButton" destination="HFP-md-tJ0" id="Gr6-Vk-ufd"/>
                         <outlet property="imageOption" destination="arQ-s0-H5v" id="wzq-rT-0LC"/>
+                        <outlet property="missionName" destination="Rx6-Bk-5R4" id="5RH-e3-bAI"/>
+                        <outlet property="missionTime" destination="MO6-t4-rqK" id="7ky-AP-iAK"/>
                         <outlet property="mondayButton" destination="kw2-M8-oXY" id="u1g-QJ-kbW"/>
                         <outlet property="saturdayButton" destination="3MS-Ry-vbY" id="bFl-ff-WF3"/>
                         <outlet property="sundayButton" destination="30w-dw-Liu" id="VDX-e2-SRw"/>
                         <outlet property="thursdayButton" destination="txS-Jl-DXF" id="WfF-wM-tb1"/>
-                        <outlet property="timeData" destination="MO6-t4-rqK" id="zXj-Yt-hX0"/>
+                        <outlet property="timeOption" destination="MO6-t4-rqK" id="Y0I-Yh-mi6"/>
                         <outlet property="tuesdayButton" destination="ecw-te-mwV" id="kBw-O4-93i"/>
                         <outlet property="wednesdayButton" destination="xfV-iY-Ia4" id="36t-Pc-CC7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dju-9P-qDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sDQ-cu-3F2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1940.5797101449277" y="144.64285714285714"/>
+            <point key="canvasLocation" x="1903" y="144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P0P-mO-egR">
@@ -500,8 +509,8 @@
     </scenes>
     <resources>
         <image name="cameraButton" width="512" height="512"/>
+        <image name="defaultImage" width="1280" height="720"/>
         <image name="moreButton" width="512" height="512"/>
-        <image name="test-missionImage" width="1920" height="728"/>
         <image name="test-torvalds" width="750" height="500"/>
     </resources>
 </document>
