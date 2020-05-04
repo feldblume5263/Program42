@@ -12,7 +12,7 @@ class ReceiveViewController: UIViewController, SendDataDelegate {
 
     @IBOutlet weak var myLabel: UILabel!
     func sendData(data: String) {
-        myLabel.text = data
+        myLabel.text = data?
     }
 
     override func viewDidLoad() {
