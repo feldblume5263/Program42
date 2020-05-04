@@ -317,6 +317,10 @@
                                         <state key="normal" title="현재 위치로 지정하기">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setLocation" destination="KRV-vY-Qp6" eventType="touchUpInside" id="pY7-d1-4K1"/>
+                                            <action selector="setLocationWith_sender:" destination="KRV-vY-Qp6" eventType="touchUpInside" id="Bbk-FS-4Xp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -354,7 +358,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xpZ-CP-cqg"/>
                     <connections>
-                        <outlet property="missionMap" destination="87H-YC-IRc" id="inD-Xd-4XM"/>
+                        <outlet property="missionMap" destination="87H-YC-IRc" id="Amx-uy-S70"/>
+                        <outlet property="setButton" destination="Pdj-jD-Yba" id="GBj-Vv-Icd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWM-to-YNO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
