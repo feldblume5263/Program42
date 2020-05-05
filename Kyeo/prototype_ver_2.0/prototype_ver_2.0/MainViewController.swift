@@ -88,8 +88,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
 
         cell.selectionStyle = .none
-        cell.missionName.text = "미션이름: " + missionData[indexPath.row]
-        cell.missionTime.text = timeArray[indexPath.row] + ", \(dayArray[indexPath.row])"
+        cell.completeButton.layer.cornerRadius = 5.0
+        cell.missionName.text = missionData[indexPath.row]
+        cell.missionDay.text = dayArray[indexPath.row]
+        cell.missionTime.text = timeArray[indexPath.row]
         cell.missionImage.image = imageArray[indexPath.row]
         return cell
     }
@@ -104,8 +106,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func setAddMissionButton()
     {
-        let addButton = UIBarButtonItem(image: UIImage(named: "addButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goAddMissionView(sender:)))
-
+        //let addButton = UIBarButtonItem(image: UIImage(named: "addButton")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goAddMissionView(sender:)))
+        let addButton = UIBarButtonItem(title: "새 미션 추가", style: .plain, target: self, action: #selector(goAddMissionView(sender:)))
+        addButton.tintColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
         navigationItem.rightBarButtonItem = addButton
     }
     
@@ -134,7 +137,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let addMissionVC = segue.source as! AddMissionTableViewController
             nameData = addMissionVC.missionName.text!
             let dateForm = DateFormatter()
-            dateForm.dateFormat = "인증시간: h:mm aa"
+            dateForm.dateFormat = "h:mm aa"
             timeData = dateForm.string(from: addMissionVC.timeOption!.date)
             dayData = addMissionVC.dayButtonData
             getDayString()

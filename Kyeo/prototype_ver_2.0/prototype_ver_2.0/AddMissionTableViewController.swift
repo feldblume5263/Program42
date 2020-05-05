@@ -42,9 +42,12 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         sundayButton.clipsToBounds = true
     }
     
+    @IBOutlet var addButtonShape: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        addButtonShape.layer.cornerRadius = 5.0
         setButtonShape()
     }
     
@@ -54,6 +57,7 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         if indexPath.row == 0
         {
             let photoSource = UIAlertController(title: "", message: "미션 사진 추가", preferredStyle: .actionSheet)
+            photoSource.view.tintColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
             let photoLibraryAction = UIAlertAction(title: "사진 선택", style: .default, handler: {(action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
@@ -129,8 +133,8 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         if dayButtonData[index] == 0
         {
             dayButtonData[index] = 1
-            sender.setTitleColor(.darkGray, for: .normal)
-            sender.backgroundColor = UIColor(red: 0.361, green: 0.788, blue: 0.812, alpha: 1.0)
+            sender.setTitleColor(.white, for: .normal)
+            sender.backgroundColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
         }
         else if dayButtonData[index] == 1
         {
@@ -147,7 +151,7 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         let addLocationVC = segue.source as! AddLocationViewController
         locationAMTV = addLocationVC.location
         print("latVal: \(locationAMTV.coordinate.latitude), lonVAL: \(locationAMTV.coordinate.longitude)")
-        gpsButton.backgroundColor = UIColor(red: 0.361, green: 0.788, blue: 0.812, alpha: 1.0)
-        gpsButton.setTitleColor(.darkGray, for: .normal)
+        gpsButton.backgroundColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
+        gpsButton.setTitleColor(.white, for: .normal)
     }
 }

@@ -15,9 +15,14 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet var map: MKMapView!
 
     let locationManager = CLLocationManager()
+    
+    @IBOutlet var addLocationButton: UIButton!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        addLocationButton.layer.cornerRadius = 5.0
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()

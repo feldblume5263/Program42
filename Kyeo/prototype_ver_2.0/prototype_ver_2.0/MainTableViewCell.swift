@@ -12,5 +12,6 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet var missionImage: UIImageView!
     @IBOutlet var missionName: UILabel!
     @IBOutlet var missionTime: UILabel!
-
+    @IBOutlet var missionDay: UILabel!
+    @IBOutlet var completeButton: UIButton!
 }
