@@ -140,10 +140,14 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
         }
     }
     
+    @IBOutlet var gpsButton: UIButton!
+
     @IBAction func addLocation(segue: UIStoryboardSegue)
     {
         let addLocationVC = segue.source as! AddLocationViewController
         locationAMTV = addLocationVC.location
         print("latVal: \(locationAMTV.coordinate.latitude), lonVAL: \(locationAMTV.coordinate.longitude)")
+        gpsButton.backgroundColor = UIColor(red: 0.361, green: 0.788, blue: 0.812, alpha: 1.0)
+        gpsButton.setTitleColor(.darkGray, for: .normal)
     }
 }

@@ -474,6 +474,7 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="fridayButton" destination="HFP-md-tJ0" id="Gr6-Vk-ufd"/>
+                        <outlet property="gpsButton" destination="EHq-Aj-CNF" id="hn8-9m-Lwx"/>
                         <outlet property="imageOption" destination="arQ-s0-H5v" id="wzq-rT-0LC"/>
                         <outlet property="missionName" destination="Rx6-Bk-5R4" id="5RH-e3-bAI"/>
                         <outlet property="missionTime" destination="MO6-t4-rqK" id="7ky-AP-iAK"/>
