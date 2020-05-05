@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
@@ -14,6 +15,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var nameData = ""
     var timeData = ""
     var dayData: [Int] = []
+    var gpsData: [CLLocation] = []
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userID: UILabel!
@@ -124,6 +126,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var dayArray: [String] = []
     var timeArray: [String] = []
     var imageArray: [UIImage] = []
+    var locationData: CLLocation!
     @IBAction func addButtonPressed(segue: UIStoryboardSegue)
     {
         if segue.identifier == "addButton"
@@ -139,6 +142,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             dayArray.append(dayString)
             timeArray.append(timeData)
             missionData.append(nameData)
+            locationData = addMissionVC.locationAMTV
+            print("TTTTESTS: \(locationData.coordinate.latitude) \(locationData.coordinate.longitude)")
+            gpsData.append(locationData)
             mainTableView.reloadData()
         }
     }

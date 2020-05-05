@@ -162,7 +162,7 @@
         <scene sceneID="ckQ-YJ-LJe">
             <objects>
                 <tableViewController storyboardIdentifier="addMissionView" id="rpV-Vj-fPQ" customClass="AddMissionTableViewController" customModule="prototype_ver_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2K-id-xh8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j2K-id-xh8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -351,7 +351,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="spD-9w-qhJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="150" id="spD-9w-qhJ">
                                         <rect key="frame" x="0.0" y="495" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spD-9w-qhJ" id="4Ob-xc-C5D">
@@ -382,7 +382,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="I5c-ra-WoA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="145" id="I5c-ra-WoA">
                                         <rect key="frame" x="0.0" y="645" width="414" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I5c-ra-WoA" id="eLL-aM-O85">
@@ -408,6 +408,9 @@
                                                             <state key="normal" title="GPS">
                                                                 <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <segue destination="6xn-ks-cPR" kind="push" id="KT9-NS-OmA"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-xF-cYW">
                                                             <rect key="frame" x="131" y="0.0" width="112" height="94"/>
@@ -487,6 +490,55 @@
                 <exit id="sDQ-cu-3F2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1903" y="144"/>
+        </scene>
+        <!--Add Location View Controller-->
+        <scene sceneID="QFK-f9-Hua">
+            <objects>
+                <viewController id="6xn-ks-cPR" customClass="AddLocationViewController" customModule="prototype_ver_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kw9-tx-owe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="362-Yl-hpD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="761"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6xn-ks-cPR" id="ANO-PO-GaP"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx5-SO-vxO">
+                                <rect key="frame" x="0.0" y="761" width="414" height="81"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.80000000000000004" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="위치 설정">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hni-le-gx3" kind="unwind" unwindAction="addLocationWithSegue:" id="ahI-qT-kdI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="362-Yl-hpD" firstAttribute="trailing" secondItem="8bJ-t2-pT3" secondAttribute="trailing" id="3BJ-jo-g5C"/>
+                            <constraint firstAttribute="bottom" secondItem="362-Yl-hpD" secondAttribute="bottom" constant="81" id="K4i-ND-yhM"/>
+                            <constraint firstItem="8bJ-t2-pT3" firstAttribute="trailing" secondItem="bx5-SO-vxO" secondAttribute="trailing" id="N5e-CG-saA"/>
+                            <constraint firstItem="362-Yl-hpD" firstAttribute="top" secondItem="8bJ-t2-pT3" secondAttribute="top" id="dPt-Mu-D6k"/>
+                            <constraint firstItem="8bJ-t2-pT3" firstAttribute="bottom" secondItem="bx5-SO-vxO" secondAttribute="bottom" constant="-34" id="emF-Ag-0FO"/>
+                            <constraint firstItem="bx5-SO-vxO" firstAttribute="leading" secondItem="8bJ-t2-pT3" secondAttribute="leading" id="gNi-HZ-9LI"/>
+                            <constraint firstItem="bx5-SO-vxO" firstAttribute="top" secondItem="362-Yl-hpD" secondAttribute="bottom" id="lh0-jS-CHc"/>
+                            <constraint firstItem="362-Yl-hpD" firstAttribute="leading" secondItem="8bJ-t2-pT3" secondAttribute="leading" id="xhP-P1-ikr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8bJ-t2-pT3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0HO-Z6-M6R"/>
+                    <connections>
+                        <outlet property="map" destination="362-Yl-hpD" id="13I-kY-l6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9l-Im-nFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hni-le-gx3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="870.53571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P0P-mO-egR">

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AddMissionTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
@@ -21,7 +22,8 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
     @IBOutlet var sundayButton: UIButton!
     @IBOutlet var missionName: UITextField!
     @IBOutlet var missionTime: UIDatePicker!
-    
+    var locationAMTV: CLLocation!
+
     func setButtonShape()
     {
         mondayButton.layer.cornerRadius = mondayButton.bounds.width / 2
@@ -136,5 +138,12 @@ class AddMissionTableViewController: UITableViewController, UIImagePickerControl
             sender.setTitleColor(.systemGray, for: .normal)
             sender.backgroundColor = .systemGray6
         }
+    }
+    
+    @IBAction func addLocation(segue: UIStoryboardSegue)
+    {
+        let addLocationVC = segue.source as! AddLocationViewController
+        locationAMTV = addLocationVC.location
+        print("latVal: \(locationAMTV.coordinate.latitude), lonVAL: \(locationAMTV.coordinate.longitude)")
     }
 }
