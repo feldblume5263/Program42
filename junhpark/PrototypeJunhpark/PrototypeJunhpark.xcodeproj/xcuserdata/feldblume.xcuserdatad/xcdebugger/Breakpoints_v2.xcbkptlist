@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8422FAF0-671D-47C4-91DD-AD65F32BE8A8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0F12CE0-DF40-4CD6-8687-74F1D9FC2D6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrototypeJunhpark/InsertLocationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "InsertLocationViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C0F12CE0-DF40-4CD6-8687-74F1D9FC2D6F - c4df75e990d5d00e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrototypeJunhpark.InsertLocationViewController.locationManager.getter : __C.CLLocationManager"
+                  moduleName = "PrototypeJunhpark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/feldblume/Documents/Coding/project_twosome/junhpark/PrototypeJunhpark/PrototypeJunhpark/InsertLocationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "C0F12CE0-DF40-4CD6-8687-74F1D9FC2D6F - d525d31735eb4de2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrototypeJunhpark.InsertLocationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; PrototypeJunhpark.InsertLocationViewController"
+                  moduleName = "PrototypeJunhpark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/feldblume/Documents/Coding/project_twosome/junhpark/PrototypeJunhpark/PrototypeJunhpark/InsertLocationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "C0F12CE0-DF40-4CD6-8687-74F1D9FC2D6F - 1fd7c2e828708bac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrototypeJunhpark.InsertLocationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;PrototypeJunhpark.InsertLocationViewController&gt;"
+                  moduleName = "PrototypeJunhpark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/feldblume/Documents/Coding/project_twosome/junhpark/PrototypeJunhpark/PrototypeJunhpark/InsertLocationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
