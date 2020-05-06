@@ -14,6 +14,7 @@
 		17547D5924556AFD000AB725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17547D5724556AFD000AB725 /* Main.storyboard */; };
 		17547D5B24556AFE000AB725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17547D5A24556AFE000AB725 /* Assets.xcassets */; };
 		17547D5E24556AFE000AB725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17547D5C24556AFE000AB725 /* LaunchScreen.storyboard */; };
+		17E3FE04246249870038306E /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3FE03246249870038306E /* CompleteViewController.swift */; };
 		17F87F322455E3030097946B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F87F312455E3030097946B /* MainViewController.swift */; };
 		17F87F342455FE240097946B /* AddMissionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F87F332455FE240097946B /* AddMissionTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		17547D5A24556AFE000AB725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17547D5D24556AFE000AB725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17547D5F24556AFE000AB725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17E3FE03246249870038306E /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		17F87F312455E3030097946B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		17F87F332455FE240097946B /* AddMissionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMissionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				174F6562245A1FE80030C99D /* MainTableViewCell.swift */,
 				17F87F332455FE240097946B /* AddMissionTableViewController.swift */,
 				17102EEA246140B300EC3607 /* AddLocationViewController.swift */,
+				17E3FE03246249870038306E /* CompleteViewController.swift */,
 				17547D5724556AFD000AB725 /* Main.storyboard */,
 				17547D5A24556AFE000AB725 /* Assets.xcassets */,
 				17547D5C24556AFE000AB725 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				17102EEB246140B300EC3607 /* AddLocationViewController.swift in Sources */,
 				17F87F322455E3030097946B /* MainViewController.swift in Sources */,
 				17547D5224556AFD000AB725 /* AppDelegate.swift in Sources */,
+				17E3FE04246249870038306E /* CompleteViewController.swift in Sources */,
 				17547D5424556AFD000AB725 /* SceneDelegate.swift in Sources */,
 				174F6563245A1FE80030C99D /* MainTableViewCell.swift in Sources */,
 			);

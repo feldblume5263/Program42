@@ -7,6 +7,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Complete View Controller-->
+        <scene sceneID="C4s-8y-BPo">
+            <objects>
+                <viewController id="vVf-BC-9g0" customClass="CompleteViewController" customModule="from" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WxM-rS-kLi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iRb-qG-Gyf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="718"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vVf-BC-9g0" id="lHt-By-Kzh"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pz-9i-QNS">
+                                <rect key="frame" x="25" y="813" width="364" height="33"/>
+                                <color key="backgroundColor" red="0.318" green="0.65305298570000003" blue="0.60403651000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="완료">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iRb-qG-Gyf" firstAttribute="top" secondItem="ote-o6-6By" secondAttribute="top" id="4VN-CC-bwj"/>
+                            <constraint firstItem="iRb-qG-Gyf" firstAttribute="leading" secondItem="ote-o6-6By" secondAttribute="leading" id="5MH-yp-hFS"/>
+                            <constraint firstItem="iRb-qG-Gyf" firstAttribute="trailing" secondItem="ote-o6-6By" secondAttribute="trailing" id="GLH-QK-7QQ"/>
+                            <constraint firstItem="4Pz-9i-QNS" firstAttribute="top" secondItem="iRb-qG-Gyf" secondAttribute="bottom" constant="7" id="XCq-DJ-Mmn"/>
+                            <constraint firstItem="ote-o6-6By" firstAttribute="bottom" secondItem="4Pz-9i-QNS" secondAttribute="bottom" constant="16" id="XCy-Qb-sZY"/>
+                            <constraint firstItem="ote-o6-6By" firstAttribute="trailing" secondItem="4Pz-9i-QNS" secondAttribute="trailing" constant="25" id="edF-Bz-dxv"/>
+                            <constraint firstItem="4Pz-9i-QNS" firstAttribute="leading" secondItem="ote-o6-6By" secondAttribute="leading" constant="25" id="nXc-zK-xtU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ote-o6-6By"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aLL-iW-WcQ"/>
+                    <connections>
+                        <outlet property="compareMap" destination="iRb-qG-Gyf" id="NB4-2s-2qQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coj-Jo-wx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="870.53571428571422"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -40,6 +84,9 @@
                                                     <state key="normal" title="미션 완료하기">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="vVf-BC-9g0" kind="push" id="hoe-1Y-Ny2"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-sE-tq9">
                                                     <rect key="frame" x="20" y="189" width="384" height="51"/>
@@ -449,7 +496,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="NZs-wb-vDN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="NZs-wb-vDN">
                                         <rect key="frame" x="0.0" y="790" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NZs-wb-vDN" id="OB5-hG-bzg">
