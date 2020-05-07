@@ -57,5 +57,8 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
                        longtudeValue: (pLocation?.coordinate.longitude)!,
                        delta: 0.01)
         
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        
     }
 }
