@@ -11,8 +11,8 @@
 - [프로젝트 개요](#프로젝트-개요)
 - [앱 설치 및 실행](#앱-설치-및-실행)
 - [앱 구성 및 사용법](#앱-구성-및-사용법)
-- [개발환경](#개발환경)
-- [팀원](#팀원)
+- [개발환경 및 언어](#개발환경-및-언어)
+- [미도육회비빔밥즈](#미도육회비빔밥즈)
 
 ## 프로젝트 개요   
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/tyson.png" alt="tyson" />
@@ -42,6 +42,17 @@ open from/from.xcodeproj
 
 ## 앱 구성 및 사용법
 
-## 개발환경
+## 개발환경 및 언어
+**Xcode**   
 
-## 팀원
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/xcode.png" width=300 alt="xcode-ver">
+
+**Swift**   
+
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/swift.png" width=80 alt="swift">
+
+## 미도육회비빔밥즈
+> 미도육회비빔밥즈는 junhpark과 kyeo가 C Piscine 시절, '미도 한우'에서 즐겨먹던 메뉴인 육회비빕밥에서 비롯된 팀명입니다.
+### 팀원
+- [junhpark](https://profile.intra.42.fr/users/junhpark)(팀장)
+- [kyeo](https://profile.intra.42.fr/users/kyeo)
