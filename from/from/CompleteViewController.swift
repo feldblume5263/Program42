@@ -17,7 +17,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     
     let locationManager = CLLocationManager()
     let destLocation = CLLocation(latitude: 37.488441, longitude: 127.065112)
-    let userLocation = MKUserLocation()
+    let userLocation = CLLocation()
     
     override func viewDidLoad()
     {
@@ -52,13 +52,13 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         compareMap.addAnnotation(annotation)
     }
     
-    func activateButton(locations: [MKUserLocation], userLocation: MKUserLocation, destLocation: CLLocation) -> Bool {
+    func activateButton(locations: [CLLocation], userLocation: CLLocation, destLocation: CLLocation) -> Bool {
         
         let userLocation = locations.last
         
         let differenceLat = ((userLocation?.coordinate.latitude)! - 37) * ((userLocation?.coordinate.latitude)! - 37)
-        print (userLocation?.coordinate.latitude ?? 1)
-        print (userLocation?.coordinate.longitude ?? 1)
+        print (userLocation?.coordinate.latitude)
+        print (userLocation?.coordinate.longitude)
         print (differenceLat)
         let differenceLon = ((userLocation?.coordinate.longitude)! - 127) * ((userLocation?.coordinate.longitude)! - 127)
         print (differenceLon)
