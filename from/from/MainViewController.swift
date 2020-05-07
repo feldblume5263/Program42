@@ -151,4 +151,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             mainTableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "toCompleteView"
+        {
+            let dest = segue.destination
+            
+            guard let cvc = dest as? CompleteViewController else
+            {
+                return
+            }
+            cvc.destLocation = locationData
+        }
+    }
+    
+    @IBAction func pressCompleteButton(sender: UIButton)
+    {
+        self.performSegue(withIdentifier: "toCompleteView", sender: self)
+    }
+    
 }

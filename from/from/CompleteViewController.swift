@@ -16,7 +16,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet var completeButton: UIButton!
     
     let locationManager = CLLocationManager()
-    let destLocation = CLLocation(latitude: 37.488441, longitude: 127.065112)
+    var destLocation = CLLocation()
     let userLocation = CLLocation()
     
     override func viewDidLoad()
