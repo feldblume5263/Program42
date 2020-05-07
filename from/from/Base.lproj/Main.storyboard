@@ -86,7 +86,8 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="vVf-BC-9g0" kind="push" id="hoe-1Y-Ny2"/>
+                                                        <action selector="pressCompleteButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrM-jq-m93"/>
+                                                        <segue destination="vVf-BC-9g0" kind="push" identifier="toCompleteView" id="hoe-1Y-Ny2"/>
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-sE-tq9">
