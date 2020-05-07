@@ -64,9 +64,13 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         print (differenceLon)
         if (differenceLat + differenceLon) < 1 {
             completeButton.isEnabled = true
+            completeButton.backgroundColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
+            completeButton.setTitleColor(.white, for: .normal)
             print ("버튼 활성화")
         } else {
             completeButton.isEnabled = false
+            completeButton.backgroundColor = .systemGray6
+            completeButton.setTitleColor(.systemGray, for: .normal)
             print ("버튼 비활성화")
         }
         return true
