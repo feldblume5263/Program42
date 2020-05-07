@@ -45,4 +45,25 @@ class AddLocationViewController: UIViewController, CLLocationManagerDelegate
         annotation.coordinate = convert
         map.addAnnotation(annotation)
     }
+    
+    func goLocation(latitudeValue: CLLocationDegrees,
+                    longtudeValue: CLLocationDegrees,
+                    delta span: Double) -> CLLocationCoordinate2D
+    {
+        let pLocation = CLLocationCoordinate2DMake(latitudeValue, longtudeValue)
+        let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
+        let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue)
+        map.setRegion(pRegion, animated: true)
+        return pLocation
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+       {
+           let pLocation = locations.last
+           
+           _ = goLocation(latitudeValue: (pLocation?.coordinate.latitude)!,
+                          longtudeValue: (pLocation?.coordinate.longitude)!,
+                          delta: 0.01)
+           
+       }
 }
