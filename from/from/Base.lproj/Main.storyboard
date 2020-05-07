@@ -45,6 +45,7 @@
                     <navigationItem key="navigationItem" id="aLL-iW-WcQ"/>
                     <connections>
                         <outlet property="compareMap" destination="iRb-qG-Gyf" id="NB4-2s-2qQ"/>
+                        <outlet property="completeButton" destination="4Pz-9i-QNS" id="iTC-85-2f5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-Jo-wx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

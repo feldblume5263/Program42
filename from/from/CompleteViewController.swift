@@ -13,6 +13,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
 {
     
     @IBOutlet weak var compareMap: MKMapView!
+    @IBOutlet var completeButton: UIButton!
     
     let locationManager = CLLocationManager()
     override func viewDidLoad()
@@ -47,11 +48,20 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         compareMap.addAnnotation(annotation)
     }
     
+    func activateButton(_ userLocation: CLLocationCoordinate2D, destLocation: CLLocationCoordinate2D,shouldChangeCharactersIn range: NSRange) -> Bool {
+        if (userLocation.latitude - 37) * (userLocation.latitude - 37) + (userLocation.longitude - 127) *  (userLocation.longitude - 127) > 1 {
+            completeButton.isEnabled = false
+        } else {
+            completeButton.isEnabled = true
+        }
+        return true
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let pLocation = locations.last
         
-        setAnnotation(latitudeValue: 37.488441, longitudeValue: 127.065112, delta: 0.1, title: "이노베이션아카데미")
+        setAnnotation(latitudeValue: 37.488441, longitudeValue: 127.065112, delta: 0.1, title: "목적지")
         
         _ = goLocation(latitudeValue: (pLocation?.coordinate.latitude)!,
                        longtudeValue: (pLocation?.coordinate.longitude)!,
@@ -59,6 +69,8 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("locations = \(locValue.latitude) \(locValue.longitude)")
-        
     }
+    
+    
 }
+
