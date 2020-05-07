@@ -57,9 +57,12 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         let userLocation = locations.last
         
         let differenceLat = ((userLocation?.coordinate.latitude)! - 37) * ((userLocation?.coordinate.latitude)! - 37)
+        print (userLocation?.coordinate.latitude ?? 1)
+        print (userLocation?.coordinate.longitude ?? 1)
+        print (differenceLat)
         let differenceLon = ((userLocation?.coordinate.longitude)! - 127) * ((userLocation?.coordinate.longitude)! - 127)
-        
-        if (differenceLat + differenceLon) > 1 {
+        print (differenceLon)
+        if (differenceLat + differenceLon) < 1 {
             completeButton.isEnabled = true
             print ("버튼 활성화")
         } else {
