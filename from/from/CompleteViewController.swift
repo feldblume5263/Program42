@@ -16,6 +16,9 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet var completeButton: UIButton!
     
     let locationManager = CLLocationManager()
+    let destLocation = CLLocation(latitude: 37.488441, longitude: 127.065112)
+    let userLocation = MKUserLocation()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,6 +27,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         compareMap.showsUserLocation = true
+        activateButton(locations: [userLocation], userLocation: userLocation, destLocation: destLocation)
     }
     
     func goLocation(latitudeValue: CLLocationDegrees,
@@ -48,11 +52,19 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         compareMap.addAnnotation(annotation)
     }
     
-    func activateButton(_ userLocation: CLLocationCoordinate2D, destLocation: CLLocationCoordinate2D,shouldChangeCharactersIn range: NSRange) -> Bool {
-        if (userLocation.latitude - 37) * (userLocation.latitude - 37) + (userLocation.longitude - 127) *  (userLocation.longitude - 127) > 1 {
-            completeButton.isEnabled = false
-        } else {
+    func activateButton(locations: [MKUserLocation], userLocation: MKUserLocation, destLocation: CLLocation) -> Bool {
+        
+        let userLocation = locations.last
+        
+        let differenceLat = ((userLocation?.coordinate.latitude)! - 37) * ((userLocation?.coordinate.latitude)! - 37)
+        let differenceLon = ((userLocation?.coordinate.longitude)! - 127) * ((userLocation?.coordinate.longitude)! - 127)
+        
+        if (differenceLat + differenceLon) > 1 {
             completeButton.isEnabled = true
+            print ("버튼 활성화")
+        } else {
+            completeButton.isEnabled = false
+            print ("버튼 비활성화")
         }
         return true
     }
@@ -61,7 +73,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     {
         let pLocation = locations.last
         
-        setAnnotation(latitudeValue: 37.488441, longitudeValue: 127.065112, delta: 0.1, title: "목적지")
+        setAnnotation(latitudeValue: destLocation.coordinate.latitude, longitudeValue: destLocation.coordinate.longitude, delta: 0.1, title: "목적지")
         
         _ = goLocation(latitudeValue: (pLocation?.coordinate.latitude)!,
                        longtudeValue: (pLocation?.coordinate.longitude)!,
