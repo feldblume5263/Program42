@@ -8,11 +8,11 @@
 ###### *독일어로 Fromm은 부지런, 성실함을 의미, 영어의 From은 위치를 나타냄* 
 
 ### 목차
-- 프로젝트 개요
-- 앱 설치 및 실행
-- 앱 구성 및 사용법
-- 개발환경
-- 팀원
+- [프로젝트 개요](#프로젝트-개요)
+- [앱 설치 및 실행](#앱-설치-및-실행)
+- [앱 구성 및 사용법](#앱-구성-및-사용법)
+- [개발환경](#개발환경)
+- [팀원](#팀원)
 
 ## 프로젝트 개요   
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/tyson.png" alt="tyson" />
@@ -35,6 +35,13 @@ open from/from.xcodeproj
 
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/manual-build.png" width="300" alt="manual-build">
 
+###### 해당 화면은 Xcode 어플리케이션의 좌측 상단입니다.
 1. 테스트를 진행할 기기가 아이폰 기종인지 확인(아니라면 붉은 영역 클릭 후 아이폰으로 설정)
 2. 재생 버튼(주황 영역) 클릭
 3. 시뮬레이터에서 앱이 자동으로 실행될 때까지 대기
+
+## 앱 구성 및 사용법
+
+## 개발환경
+
+## 팀원
