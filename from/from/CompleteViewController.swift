@@ -60,7 +60,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         print (differenceLat)
         let differenceLon = ((userLocation.longitude) - destLocation.coordinate.longitude) * ((userLocation.longitude) - destLocation.coordinate.longitude)
         print (differenceLon)
-        if (differenceLat + differenceLon) < 1 {
+        if (differenceLat + differenceLon) < 0.000001 {
             completeButton.isEnabled = true
             completeButton.backgroundColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
             completeButton.setTitleColor(.white, for: .normal)
