@@ -87,7 +87,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="pressCompleteButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrM-jq-m93"/>
-                                                        <segue destination="vVf-BC-9g0" kind="push" identifier="toCompleteView" id="hoe-1Y-Ny2"/>
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-sE-tq9">
@@ -214,6 +213,7 @@
                         <outlet property="mainTableView" destination="dEA-xi-EYO" id="ddP-Rs-pay"/>
                         <outlet property="userID" destination="Cap-11-e3k" id="ILL-UE-H9k"/>
                         <outlet property="userImage" destination="kFN-Bs-FjZ" id="jjg-vy-6Kc"/>
+                        <segue destination="vVf-BC-9g0" kind="show" identifier="toCompleteView" id="dbK-ZU-I6U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
