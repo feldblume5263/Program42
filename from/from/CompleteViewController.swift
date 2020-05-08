@@ -17,7 +17,6 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     
     let locationManager = CLLocationManager()
     var destLocation = CLLocation()
-    var userLocation = CLLocation()
     
     override func viewDidLoad()
     {
@@ -27,7 +26,8 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         compareMap.showsUserLocation = true
-        activateButton(locations: [userLocation], userLocation: userLocation, destLocation: destLocation)
+        let userLocation = locationManager.location?.coordinate
+        activateButton(locations: [userLocation!], userLocation: userLocation!, destLocation: destLocation)
     }
     
     func goLocation(latitudeValue: CLLocationDegrees,
@@ -52,13 +52,13 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         compareMap.addAnnotation(annotation)
     }
     
-    func activateButton(locations: [CLLocation], userLocation: CLLocation, destLocation: CLLocation) -> Bool {
-        
-        let differenceLat = ((userLocation.coordinate.latitude) - destLocation.coordinate.latitude) * ((userLocation.coordinate.latitude) - destLocation.coordinate.latitude)
-        print (userLocation.coordinate.latitude)
-        print (userLocation.coordinate.longitude)
+    func activateButton(locations: [CLLocationCoordinate2D], userLocation: CLLocationCoordinate2D, destLocation: CLLocation) -> Bool {
+                
+        let differenceLat = ((userLocation.latitude) - destLocation.coordinate.latitude) * ((userLocation.latitude) - destLocation.coordinate.latitude)
+        print (userLocation.latitude)
+        print (userLocation.longitude)
         print (differenceLat)
-        let differenceLon = ((userLocation.coordinate.longitude) - destLocation.coordinate.longitude) * ((userLocation.coordinate.longitude) - destLocation.coordinate.longitude)
+        let differenceLon = ((userLocation.longitude) - destLocation.coordinate.longitude) * ((userLocation.longitude) - destLocation.coordinate.longitude)
         print (differenceLon)
         if (differenceLat + differenceLon) < 1 {
             completeButton.isEnabled = true
@@ -78,7 +78,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     {
         let pLocation = locations.last
         
-        setAnnotation(latitudeValue: destLocation.coordinate.latitude, longitudeValue: destLocation.coordinate.longitude, delta: 0.1, title: "목적지")
+        setAnnotation(latitudeValue: destLocation.coordinate.latitude, longitudeValue: destLocation.coordinate.longitude, delta: 0.1, title: "미션 영역")
         
         _ = goLocation(latitudeValue: (pLocation?.coordinate.latitude)!,
                        longtudeValue: (pLocation?.coordinate.longitude)!,
