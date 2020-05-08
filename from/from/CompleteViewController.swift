@@ -17,7 +17,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     
     let locationManager = CLLocationManager()
     var destLocation = CLLocation()
-    let userLocation = CLLocation()
+    var userLocation = CLLocation()
     
     override func viewDidLoad()
     {
@@ -54,13 +54,11 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     
     func activateButton(locations: [CLLocation], userLocation: CLLocation, destLocation: CLLocation) -> Bool {
         
-        let userLocation = locations.last
-        
-        let differenceLat = ((userLocation?.coordinate.latitude)! - destLocation.coordinate.latitude) * ((userLocation?.coordinate.latitude)! - destLocation.coordinate.latitude)
-        print (userLocation!.coordinate.latitude)
-        print (userLocation!.coordinate.longitude)
+        let differenceLat = ((userLocation.coordinate.latitude) - destLocation.coordinate.latitude) * ((userLocation.coordinate.latitude) - destLocation.coordinate.latitude)
+        print (userLocation.coordinate.latitude)
+        print (userLocation.coordinate.longitude)
         print (differenceLat)
-        let differenceLon = ((userLocation?.coordinate.longitude)! - destLocation.coordinate.longitude) * ((userLocation?.coordinate.longitude)! - destLocation.coordinate.longitude)
+        let differenceLon = ((userLocation.coordinate.longitude) - destLocation.coordinate.longitude) * ((userLocation.coordinate.longitude) - destLocation.coordinate.longitude)
         print (differenceLon)
         if (differenceLat + differenceLon) < 1 {
             completeButton.isEnabled = true
@@ -83,9 +81,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
                        delta: 0.01)
         
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        print("user locations = \(locValue.latitude) \(locValue.longitude)")
     }
-    
-    
 }
 
