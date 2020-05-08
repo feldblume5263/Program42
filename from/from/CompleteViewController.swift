@@ -53,10 +53,12 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
     }
     
     func activateButton(locations: [CLLocationCoordinate2D], userLocation: CLLocationCoordinate2D, destLocation: CLLocation) -> Bool {
-                
-        let differenceLat = ((userLocation.latitude) - destLocation.coordinate.latitude) * ((userLocation.latitude) - destLocation.coordinate.latitude)
+        
         print (userLocation.latitude)
         print (userLocation.longitude)
+        
+        let differenceLat = ((userLocation.latitude) - destLocation.coordinate.latitude) * ((userLocation.latitude) - destLocation.coordinate.latitude)
+        
         print (differenceLat)
         let differenceLon = ((userLocation.longitude) - destLocation.coordinate.longitude) * ((userLocation.longitude) - destLocation.coordinate.longitude)
         print (differenceLon)
