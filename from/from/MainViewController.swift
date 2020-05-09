@@ -125,11 +125,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationItem.rightBarButtonItem = addButton
     }
     
+    var idStr = ""
+    var profileImage: UIImage!
     func setUserInfo()
     {
         userImage.layer.cornerRadius = userImage.frame.width / 2
         userImage.clipsToBounds = true
-        userID!.text = "리눅스 토르발즈"
+        userID!.text = idStr
+        userImage.image = profileImage
     }
     
     override func viewDidLoad()

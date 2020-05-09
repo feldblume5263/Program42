@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O7Q-cQ-NO2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZp-K0-zfd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -173,6 +173,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-torvalds" translatesAutoresizingMaskIntoConstraints="NO" id="kFN-Bs-FjZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="tintColor" red="0.318" green="0.65305298570000003" blue="0.60403651000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="SqS-oJ-Bid"/>
                                                     <constraint firstAttribute="height" constant="80" id="Yfm-Po-yu1"/>
@@ -618,6 +619,93 @@
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="870.53571428571422"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="rRp-VG-ABm">
+            <objects>
+                <viewController storyboardIdentifier="loginView" id="YZp-K0-zfd" customClass="LoginViewController" customModule="from" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4v-Fd-Vk6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 사진" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZA-g8-VZU">
+                                <rect key="frame" x="168" y="163" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CZA-g8-VZU" secondAttribute="height" multiplier="26:7" id="yff-aK-P20"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-J0-wuI">
+                                <rect key="frame" x="162" y="192" width="90" height="90"/>
+                                <color key="tintColor" red="0.318" green="0.65305298570000003" blue="0.60403651000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vc7-J0-wuI" secondAttribute="height" multiplier="90:91" id="H8K-k6-hRV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvY-qw-oek">
+                                <rect key="frame" x="185" y="302" width="45" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GvY-qw-oek" secondAttribute="height" multiplier="15:7" id="hES-qI-goL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디를 입력해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09n-mk-Xly">
+                                <rect key="frame" x="110" y="343" width="194" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="09n-mk-Xly" secondAttribute="height" multiplier="97:17" id="2GC-fy-BzA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-aM-t2n">
+                                <rect key="frame" x="110" y="464" width="194" height="30"/>
+                                <color key="backgroundColor" red="0.318" green="0.65305298570000003" blue="0.60403651000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ymx-aM-t2n" secondAttribute="height" multiplier="97:15" id="VuX-jn-4OZ"/>
+                                </constraints>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressedWithSender:" destination="YZp-K0-zfd" eventType="touchUpInside" id="63z-Vn-zQ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="09n-mk-Xly" firstAttribute="top" secondItem="GvY-qw-oek" secondAttribute="bottom" constant="20" id="09L-WQ-tFF"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="trailing" secondItem="09n-mk-Xly" secondAttribute="trailing" constant="110" id="8Yw-ik-7uJ"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="trailing" secondItem="CZA-g8-VZU" secondAttribute="trailing" constant="168" id="Aa2-4A-qnh"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="trailing" secondItem="ymx-aM-t2n" secondAttribute="trailing" constant="110" id="B9J-s4-yvO"/>
+                            <constraint firstItem="CZA-g8-VZU" firstAttribute="leading" secondItem="d4I-Vc-phH" secondAttribute="leading" constant="168" id="Eoq-vQ-Jmo"/>
+                            <constraint firstItem="Vc7-J0-wuI" firstAttribute="top" secondItem="CZA-g8-VZU" secondAttribute="bottom" constant="7.5" id="JO5-iz-Zaz"/>
+                            <constraint firstItem="ymx-aM-t2n" firstAttribute="leading" secondItem="d4I-Vc-phH" secondAttribute="leading" constant="110" id="MjC-aK-aJI"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="trailing" secondItem="Vc7-J0-wuI" secondAttribute="trailing" constant="162" id="VWG-o3-eeL"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="bottom" secondItem="ymx-aM-t2n" secondAttribute="bottom" constant="368" id="aqN-xZ-t1H"/>
+                            <constraint firstItem="CZA-g8-VZU" firstAttribute="top" secondItem="d4I-Vc-phH" secondAttribute="top" constant="119" id="k8k-jC-X2K"/>
+                            <constraint firstItem="ymx-aM-t2n" firstAttribute="top" secondItem="09n-mk-Xly" secondAttribute="bottom" constant="87" id="mAn-dT-7uB"/>
+                            <constraint firstItem="GvY-qw-oek" firstAttribute="leading" secondItem="d4I-Vc-phH" secondAttribute="leading" constant="185" id="mhe-8Z-dsF"/>
+                            <constraint firstItem="d4I-Vc-phH" firstAttribute="trailing" secondItem="GvY-qw-oek" secondAttribute="trailing" constant="184" id="nbw-rn-b01"/>
+                            <constraint firstItem="09n-mk-Xly" firstAttribute="leading" secondItem="d4I-Vc-phH" secondAttribute="leading" constant="110" id="v6c-BV-fHF"/>
+                            <constraint firstItem="Vc7-J0-wuI" firstAttribute="leading" secondItem="d4I-Vc-phH" secondAttribute="leading" constant="162" id="z4G-1Q-BPj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d4I-Vc-phH"/>
+                    </view>
+                    <connections>
+                        <outlet property="customID" destination="09n-mk-Xly" id="Vvt-7V-2ia"/>
+                        <outlet property="customImage" destination="Vc7-J0-wuI" id="nEi-Hd-HB1"/>
+                        <outlet property="loginButton" destination="ymx-aM-t2n" id="0Uu-Yb-fn9"/>
+                        <segue destination="O7Q-cQ-NO2" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" id="kJS-wB-aXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQB-c4-V61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759.4202898550725" y="109.82142857142857"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="P0P-mO-egR">
             <objects>
@@ -642,6 +730,7 @@
         <image name="cameraButton" width="512" height="512"/>
         <image name="defaultImage" width="1280" height="720"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="test-torvalds" width="750" height="500"/>
     </resources>
 </document>
