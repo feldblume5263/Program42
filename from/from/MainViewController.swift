@@ -11,10 +11,15 @@ import CoreLocation
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    let cal = Calendar(identifier: .gregorian)
+    let now = Date()
+    
     var missionData: [String] = []
     var nameData = ""
     var timeData = ""
+    var timeSource: [Int] = []
     var dayData: [Int] = []
+    var daySource: [Int] = []
     var gpsData: [CLLocation] = []
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var userImage: UIImageView!
@@ -95,6 +100,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        let dayOfWeek = cal.component(.weekday, from: now)
         let cellIdentifier = "missionData"
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
         
@@ -106,6 +112,77 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.missionDay.text = dayArray[indexPath.row]
         cell.missionTime.text = timeArray[indexPath.row]
         cell.missionImage.image = imageArray[indexPath.row]
+        
+        if dayOfWeek == 1 {
+            if (daySource[indexPath.row * 7 + 6] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 2 {
+            if (daySource[indexPath.row * 7] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 3 {
+            if (daySource[indexPath.row * 7 + 1] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 4 {
+            if (daySource[indexPath.row * 7 + 2] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 5 {
+            if (daySource[indexPath.row * 7 + 3] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 6 {
+            if (daySource[indexPath.row * 7 + 4] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
+        if dayOfWeek == 7 {
+            if (daySource[indexPath.row * 7 + 5] == 1) {
+                cell.completeButton.isEnabled = true
+            }
+            else {
+                cell.completeButton.isEnabled = false
+                cell.completeButton.backgroundColor = .systemGray6
+                cell.completeButton.setTitleColor(.systemGray, for: .normal)
+            }
+        }
         return cell
     }
     
@@ -154,6 +231,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             dateForm.dateFormat = "h:mm aa"
             timeData = dateForm.string(from: addMissionVC.timeOption!.date)
             dayData = addMissionVC.dayButtonData
+            daySource.append(contentsOf: dayData)
+            print(daySource)
             getDayString()
             imageArray.append(addMissionVC.imageData!)
             dayArray.append(dayString)
@@ -199,4 +278,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         completedMissionCount += completeMissionVC.countComplete
         completeData()
     }
+    
+    
 }
