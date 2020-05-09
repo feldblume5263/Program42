@@ -19,12 +19,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userID: UILabel!
+    @IBOutlet var userPercentage: UILabel!
     
-    func completeEvent(){
-        
-    }
+    var allCount: Double = 0.000001
+    var completedMissionCount: Int! = 0
     
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return missionData.count
@@ -36,7 +35,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         dayString = ""
         var i = 0;
+        var j = 0;
         
+        while j < 7
+        {
+            if dayData[j] == 1 {
+                allCount += 1
+            }
+            j += 1
+        }
+        completeData()
         while i < 7
         {
             if dayData[i] == 1
@@ -89,7 +97,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         let cellIdentifier = "missionData"
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
-
+        
         cell.completeButton.tag = indexPath.row
         
         cell.selectionStyle = .none
@@ -130,6 +138,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         setAddMissionButton()
         setUserInfo()
+        completeData()
     }
     var dayArray: [String] = []
     var timeArray: [String] = []
@@ -172,9 +181,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func completeData() {
+        print("value =  \(completedMissionCount!)")
+        print(dayData)
+        print(allCount)
+        let percentage: Double = round((Double((Double(completedMissionCount) / Double(allCount)) * 100)) * 10) / 10
+        userPercentage.text! = "주간 미션달성률 : \(percentage)%"
+    }
+    
     @IBAction func pressCompleteButton(sender: UIButton)
     {
         self.performSegue(withIdentifier: "toCompleteView", sender: sender)
     }
     
+    @IBAction func countComplete(segue: UIStoryboardSegue) {
+        let completeMissionVC = segue.source as! CompleteViewController
+        completedMissionCount += completeMissionVC.countComplete
+        completeData()
+    }
 }

@@ -21,13 +21,16 @@
                                     <outlet property="delegate" destination="vVf-BC-9g0" id="lHt-By-Kzh"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pz-9i-QNS">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="completeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pz-9i-QNS">
                                 <rect key="frame" x="25" y="813" width="364" height="33"/>
                                 <color key="backgroundColor" red="0.318" green="0.65305298570000003" blue="0.60403651000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="완료">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W0v-cW-0tB" kind="unwind" unwindAction="countCompleteWithSegue:" id="neE-E4-PYn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -49,6 +52,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-Jo-wx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="W0v-cW-0tB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="870.53571428571422"/>
         </scene>
@@ -185,13 +189,21 @@
                                             <constraint firstItem="Cap-11-e3k" firstAttribute="top" secondItem="kFN-Bs-FjZ" secondAttribute="bottom" constant="8" id="yLn-PL-EKw"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6n-nd-W7W">
+                                        <rect key="frame" x="104" y="15" width="87.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="T6n-nd-W7W" firstAttribute="leading" secondItem="1FK-5V-LTs" secondAttribute="trailing" constant="8" id="3xf-fL-Idr"/>
                                     <constraint firstAttribute="bottom" secondItem="1FK-5V-LTs" secondAttribute="bottom" constant="14.5" id="B6u-NT-6rM"/>
                                     <constraint firstAttribute="trailing" secondItem="1FK-5V-LTs" secondAttribute="trailing" constant="318" id="Y3T-cm-3AK"/>
                                     <constraint firstItem="1FK-5V-LTs" firstAttribute="top" secondItem="5lp-1r-509" secondAttribute="top" constant="14" id="ZiA-4l-HWN"/>
                                     <constraint firstItem="1FK-5V-LTs" firstAttribute="leading" secondItem="5lp-1r-509" secondAttribute="leading" constant="16" id="oa4-T6-9LK"/>
+                                    <constraint firstItem="T6n-nd-W7W" firstAttribute="top" secondItem="5lp-1r-509" secondAttribute="top" constant="15" id="vNe-qv-Fau"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -213,6 +225,7 @@
                         <outlet property="mainTableView" destination="dEA-xi-EYO" id="ddP-Rs-pay"/>
                         <outlet property="userID" destination="Cap-11-e3k" id="ILL-UE-H9k"/>
                         <outlet property="userImage" destination="kFN-Bs-FjZ" id="jjg-vy-6Kc"/>
+                        <outlet property="userPercentage" destination="T6n-nd-W7W" id="4kb-Xv-UEn"/>
                         <segue destination="vVf-BC-9g0" kind="show" identifier="toCompleteView" id="dbK-ZU-I6U"/>
                     </connections>
                 </viewController>
