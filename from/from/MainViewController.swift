@@ -87,6 +87,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cellIdentifier = "missionData"
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MainTableViewCell
 
+        cell.completeButton.tag = indexPath.row
+        
         cell.selectionStyle = .none
         cell.completeButton.layer.cornerRadius = 5.0
         cell.missionName.text = missionData[indexPath.row]
@@ -162,13 +164,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             {
                 return
             }
-            cvc.destLocation = locationData
+            let index = (sender as! UIButton).tag
+            cvc.destLocation = gpsData[index]
         }
     }
     
     @IBAction func pressCompleteButton(sender: UIButton)
     {
-        self.performSegue(withIdentifier: "toCompleteView", sender: self)
+        self.performSegue(withIdentifier: "toCompleteView", sender: sender)
     }
     
 }
