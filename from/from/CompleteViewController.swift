@@ -9,15 +9,14 @@
 import UIKit
 import MapKit
 
-class CompleteViewController: UIViewController, CLLocationManagerDelegate
-{
+class CompleteViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var compareMap: MKMapView!
     @IBOutlet var completeButton: UIButton!
     
     let locationManager = CLLocationManager()
     var destLocation = CLLocation()
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -75,7 +74,7 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         }
         return true
     }
-    
+   
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let pLocation = locations.last
@@ -89,5 +88,9 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("user locations = \(locValue.latitude) \(locValue.longitude)")
     }
+    
+    func showCircle(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance, mapView: MKMapView) {
+        let circle = MKCircle(center: coordinate, radius: radius)
+        compareMap.addOverlay(circle)
+    }
 }
-
