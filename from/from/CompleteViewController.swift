@@ -14,6 +14,10 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     @IBOutlet weak var compareMap: MKMapView!
     @IBOutlet var completeButton: UIButton!
     
+    @IBAction func afterComplete(_ sender: UIButton){
+        
+    }
+    
     let locationManager = CLLocationManager()
     var destLocation = CLLocation()
 
@@ -51,29 +55,6 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         compareMap.addAnnotation(annotation)
     }
     
-    func activateButton(locations: [CLLocationCoordinate2D], userLocation: CLLocationCoordinate2D, destLocation: CLLocation) -> Bool {
-        
-        print (userLocation.latitude)
-        print (userLocation.longitude)
-        
-        let differenceLat = ((userLocation.latitude) - destLocation.coordinate.latitude) * ((userLocation.latitude) - destLocation.coordinate.latitude)
-        
-        print (differenceLat)
-        let differenceLon = ((userLocation.longitude) - destLocation.coordinate.longitude) * ((userLocation.longitude) - destLocation.coordinate.longitude)
-        print (differenceLon)
-        if (differenceLat + differenceLon) < 0.000001 {
-            completeButton.isEnabled = true
-            completeButton.backgroundColor = UIColor(red: 0.317, green: 0.651, blue: 0.605, alpha: 1.0)
-            completeButton.setTitleColor(.white, for: .normal)
-            print ("버튼 활성화")
-        } else {
-            completeButton.isEnabled = false
-            completeButton.backgroundColor = .systemGray6
-            completeButton.setTitleColor(.systemGray, for: .normal)
-            print ("버튼 비활성화")
-        }
-        return true
-    }
    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {

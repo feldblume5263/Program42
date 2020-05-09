@@ -19,7 +19,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var mainTableView: UITableView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userID: UILabel!
-
+    
+    func completeEvent(){
+        
+    }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
