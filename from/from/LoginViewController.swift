@@ -54,11 +54,17 @@ class LoginViewController: UIViewController, UINavigationControllerDelegate,UIIm
             dismiss(animated: true, completion: nil)
         }
         
+    func buttonShape()
+    {
+        customID.layer.cornerRadius = 5.0
+        loginButton.layer.cornerRadius = 5.0
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
-            customImage.layer.cornerRadius = customImage.frame.width / 2
-            customImage.clipsToBounds = true
+        buttonShape()
+        customImage.layer.cornerRadius = customImage.frame.width / 2
+        customImage.clipsToBounds = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(selectCustomImage))
         customImage.addGestureRecognizer(tap)
