@@ -41,6 +41,16 @@ open from/from.xcodeproj
 3. 시뮬레이터에서 앱이 자동으로 실행될 때까지 대기
 
 ## 앱 구성 및 사용법
+> '프롬'은 로그인 뷰, 미션 리스트 뷰, 미션 추가 뷰, 미션 완료 뷰 등으로 이루어져 있습니다
+##### 1. 앱이 실행되면 프로필 사진과 로그인할 아이디를 입력해주세요
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/login.gif" height=300 alt="login.gif">
+
+##### 2. '새 미션 추가'를 통해 새로운 미션 이름, 수행할 요일, 시간, 위치 등을 입력해주세요
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/addMission.gif" height=300 alt="addMission.gif">
+
+##### 3. 위치를 추가하실 때는 해당 위치로 이동 후 꾹 눌러주세요 
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/addGPS.gif" height=300 alt="addGPS.gif">
+
 
 ## 개발환경 및 언어
 **Xcode**   
