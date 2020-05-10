@@ -107,6 +107,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.completeButton.tag = indexPath.row
         
+        cell.moreButton.tag = indexPath.row
+        
         cell.selectionStyle = .none
         cell.completeButton.layer.cornerRadius = 5.0
         cell.missionName.text = missionData[indexPath.row]
@@ -239,5 +241,27 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let completeMissionVC = segue.source as! CompleteViewController
         completedMissionCount += completeMissionVC.countComplete
         completeData()
+    }
+    
+    @IBAction func pressMoreButton(sender: UIButton)
+    {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "미션 삭제", style: .destructive, handler: { action in
+            print("deleting.................")
+            self.missionData.remove(at: sender.tag)
+            self.timeSource.remove(at: sender.tag)
+            self.daySource.remove(at: sender.tag)
+            self.gpsData.remove(at: sender.tag)
+            self.dayArray.remove(at: sender.tag)
+            self.timeArray.remove(at: sender.tag)
+            self.imageArray.remove(at: sender.tag)
+            
+            self.mainTableView.reloadData()
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -125,6 +125,9 @@
                                                             </constraints>
                                                             <color key="tintColor" red="0.12619194389999999" green="0.66094964739999995" blue="0.60513061290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="ellipsis" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="pressMoreButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mot-Hq-l5M"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -158,6 +161,7 @@
                                             <outlet property="missionImage" destination="aeR-1n-6jV" id="hRf-bl-FvP"/>
                                             <outlet property="missionName" destination="w8n-1l-ecf" id="cbW-pA-1Dv"/>
                                             <outlet property="missionTime" destination="GDc-yF-YJH" id="85P-3i-MNP"/>
+                                            <outlet property="moreButton" destination="Fk1-8G-jgD" id="caI-Sw-519"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

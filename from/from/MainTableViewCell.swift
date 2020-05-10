@@ -14,4 +14,6 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet var missionTime: UILabel!
     @IBOutlet var missionDay: UILabel!
     @IBOutlet var completeButton: UIButton!
+    
+    @IBOutlet var moreButton: UIButton!
 }
