@@ -51,7 +51,7 @@ open from/from.xcodeproj
 ##### 3. 위치를 추가하실 때는 해당 위치로 이동 후 꾹 눌러주세요
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/addGPS.gif" height=420 alt="addGPS.gif">
 
-##### 4. 설정하신 요일과 미션 수행 시간이 근접하다면 미션 완료버튼이 활성화됩니다
+##### 4. 미션 수행 시간이 근접하다면 미션 완료버튼이 활성화됩니다
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/setMission.gif" height=420 alt="setMission.gif">
 
 ##### 5. 미션을 수행할 위치로 가시면 위치 인증 버튼이 활성화되며 미션을 수행하실 수 있습니다
