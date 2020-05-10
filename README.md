@@ -54,6 +54,9 @@ open from/from.xcodeproj
 ##### 4. 미션 수행 시간이 근접하다면 미션 완료버튼이 활성화됩니다
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/setMission.gif" height=420 alt="setMission.gif">
 
+> 시뮬레이터에서 위치 테스트 방법 https://developer-fury.tistory.com/34
+
+
 ##### 5. 미션을 수행할 위치로 가시면 위치 인증 버튼이 활성화되며 미션을 수행하실 수 있습니다
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/missionComplete.gif" height=420 alt="missionComplete.gif">
 
