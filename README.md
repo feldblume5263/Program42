@@ -48,9 +48,18 @@ open from/from.xcodeproj
 ##### 2. '새 미션 추가'를 통해 새로운 미션 이름, 수행할 요일, 시간, 위치 등을 입력해주세요
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/addMission.gif" height=300 alt="addMission.gif">
 
-##### 3. 위치를 추가하실 때는 해당 위치로 이동 후 꾹 눌러주세요 
+##### 3. 위치를 추가하실 때는 해당 위치로 이동 후 꾹 눌러주세요
 <img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/addGPS.gif" height=300 alt="addGPS.gif">
 
+##### 4. 설정하신 요일과 미션 수행 시간이 근접하다면 미션 완료버튼이 활성화됩니다
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/setMission.gif" height=300 alt="setMission.gif">
+
+##### 5. 미션을 수행할 위치로 가시면 위치 인증 버튼이 활성화되며 미션을 수행하실 수 있습니다
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/missionComplete.gif" height=300 alt="missionComplete.gif">
+
+> 미션을 할 때마다 달성률이 상승하니 100 퍼센트를 위해 열심히 미션을 수행해주세요!
+> 원치않은 미션은 삭제도 가능합니다
+<img src="https://github.com/feldblume5263/Program42/blob/master/srcs/gifs/deleteMission.gif" height=300 alt="deleteMission.gif">
 
 ## 개발환경 및 언어
 **Xcode**   
