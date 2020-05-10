@@ -240,6 +240,4 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         completedMissionCount += completeMissionVC.countComplete
         completeData()
     }
-    
-    
 }
