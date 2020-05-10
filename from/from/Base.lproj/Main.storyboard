@@ -49,6 +49,7 @@
                     <connections>
                         <outlet property="compareMap" destination="iRb-qG-Gyf" id="NB4-2s-2qQ"/>
                         <outlet property="completeButton" destination="4Pz-9i-QNS" id="iTC-85-2f5"/>
+                        <outlet property="timerButton" destination="4Pz-9i-QNS" id="yQE-pM-D77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coj-Jo-wx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -728,7 +729,7 @@
     </scenes>
     <resources>
         <image name="cameraButton" width="512" height="512"/>
-        <image name="defaultImage" width="1280" height="720"/>
+        <image name="defaultImage" width="2296" height="1724"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="test-torvalds" width="750" height="500"/>

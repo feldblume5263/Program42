@@ -29,6 +29,8 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate, MKMap
         compareMap.showsUserLocation = true
         let userLocation = locationManager.location?.coordinate
         activateButton(locations: [userLocation!], userLocation: userLocation!, destLocation: destLocation)
+        updateButton()
+         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(CompleteViewController.updateButton)), userInfo: nil, repeats: true)
     }
     
     func goLocation(latitudeValue: CLLocationDegrees,
@@ -95,5 +97,15 @@ class CompleteViewController: UIViewController, CLLocationManagerDelegate, MKMap
     func showCircle(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance, mapView: MKMapView) {
         let circle = MKCircle(center: coordinate, radius: radius)
         compareMap.addOverlay(circle)
+    }
+    
+    @IBOutlet var timerButton: UIButton?
+    var timeLaunched: Int = 0
+    var timer: Timer?
+
+    @objc func updateButton() {
+        let userLocation = locationManager.location?.coordinate
+       activateButton(locations: [userLocation!], userLocation: userLocation!, destLocation: destLocation)
+        timeLaunched += 1
     }
 }

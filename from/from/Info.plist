@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App needs location servers for stuff.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -22,8 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App needs location servers for stuff.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>사진 보관함에 대한 접근을 허용해주십시오</string>
+	<key>Privacy — Location Always and When In Use Usage Description and Privacy</key>
+	<string>Location When In Use Usage Description.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,6 +45,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
