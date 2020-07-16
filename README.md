@@ -4,7 +4,8 @@
 <h4 align=center><code>이 프로젝트는 부지런함을 위한 위치기반 목표 달성 어플을 만드는 것입니다</code></h4>
    
 ---
-##### 프롬 홍보영상 <https://drive.google.com/file/d/1QJnK4A4QU1iZoWynxRA_pTAGTXcMVc6Z/view?usp=sharing>
+### 프롬 홍보영상 <https://drive.google.com/file/d/1QJnK4A4QU1iZoWynxRA_pTAGTXcMVc6Z/view?usp=sharing>
+### 프롬 프로토타입(OVEN) <https://ovenapp.io/view/7T3VzrtIh8zHM40s1oeuRs8wKItBjjmN/fo8hT>
 ###### *독일어로 Fromm은 부지런, 성실함을 의미, 영어의 From은 위치를 나타냄* 
 
 ### 목차
