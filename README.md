@@ -77,5 +77,5 @@ open from/from.xcodeproj
 ## 미도육회비빔밥즈
 > 미도육회비빔밥즈는 junhpark과 kyeo가 C Piscine 시절, '미도 한우'에서 즐겨먹던 메뉴인 육회비빕밥에서 비롯된 팀명입니다.
 ### 팀원
-- [junhpark](https://profile.intra.42.fr/users/junhpark)(팀장)
-- [kyeo](https://profile.intra.42.fr/users/kyeo)
+- [박준홍](https://profile.intra.42.fr/users/junhpark)(팀장)
+- [여건호](https://profile.intra.42.fr/users/kyeo)
